@@ -1,5 +1,5 @@
 name = "Ian Fox"
 SID = "23570128"
 email = "foxxintheboxx@berkeley.edu"
-github <- name = "foxxintheboxx"
+github_name = "foxxintheboxx"
 status = "enrolled"
