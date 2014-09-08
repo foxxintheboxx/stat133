@@ -50,7 +50,7 @@ ex1.data.v = ex1.data$x
 # create the variable <n.ex1.data> that gives the number of observations in the
 # vector <ex1.data.v>.
 
- n.ex1.data = ex1.data.v
+ n.ex1.data = length(ex1.data.v)
 
 
 
