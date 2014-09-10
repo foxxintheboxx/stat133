@@ -89,7 +89,7 @@ max.ex1.data = max(ex1.data.v)
 # create the vector <ex1.data.double>. This should be a vector of each
 # observation from <ex1.data.v> doubled.
 
-ex1.data.double = rep(ex1.data.v, each = 2)
+ex1.data.double = ex1.data.v * 2
 
 
 
