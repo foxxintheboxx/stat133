@@ -5,5 +5,19 @@
     "email": "foxxintheboxx@berkeley.edu", 
     "github_name": "foxxintheboxx", 
     "status": "enrolled", 
-    "grades": {}
+    "grades": {
+        "hw1": {
+            "note": "", 
+            "hash": "92cbcebe8db213814c302acbf830f5a3093d381d", 
+            "earned": 14, 
+            "possible": 14, 
+            "penalty": 0, 
+            "parts": {
+                "ex1": {
+                    "possible": 14, 
+                    "earned": 14
+                }
+            }
+        }
+    }
 }
