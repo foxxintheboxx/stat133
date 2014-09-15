@@ -1,0 +1,22 @@
+load("/Users/ianfox/Downloads/SFHousing.rda")
+load("/Users/ianfox/Downloads/SFHousing.rda")
+load("/Users/ianfox/Downloads/SFHousing.rda")
+load("/Users/ianfox/Downloads/SFHousing.rda")
+ls
+setwd("./desktop")
+setwd("./stat133")
+load("/Users/ianfox/Desktop/stat133/classwork/lecture5/KaiserBabies.rda")
+objects()
+infants
+infants[, "bwt"]
+clean
+clear
+clear()
+infants$bwt
+help(mean)
+hist(infants$bwt)
+hist(infants$bwt, freq=FALSE, xlab="Birth Weight (oz)", main= "Male Babies, oakland")
+plot(infants$bwt, freq=FALSE, xlab="Birth Weight (oz)", main= "Male Babies, oakland")
+plot(densit(infants$bwt), xlab="Birth Weight (oz)", main= "Male Babies, oakland")
+plot(density(infants$bwt), xlab="Birth Weight (oz)", main= "Male Babies, oakland")
+getwd()
