@@ -14,7 +14,7 @@
 # The datafile family.rda is in your hw2 folder.  Use the load() command to
 # load the data into R/RStudio.
 
-# load( your code here )
+load("family.rda")
 
 
 
@@ -31,7 +31,7 @@
 # a member of family is obese and FALSE otherwise (you need to consider makes and females
 # separately).
 
-# OW_NHANES <- your code here
+ OW_NHANES = (family$bmi > 25 & family$gender == "f") | (family$bmi > 26 & family$gender == "m")
 
 
 # Q2. 
@@ -44,7 +44,7 @@
 # To do this, first create a vector of length 2 called OWval whose first element 
 # is 26 and second element is 25.
 
-# OWval <- your code here
+ OWval = c(26, 25)
 
 
 # Create the OW_limit vector by subsetting OWval by position, where the 
@@ -52,13 +52,13 @@
 # (i.e. use as.numeric() to coerce the factor vector storing gender to a
 # numeric vector)
 
-# OW_limit <- your code here
+OW_limit = as.numeric(family$gender)
 
 
 # Finally, us OW_limit and bmi to create the desired logical vector, called OW_NHANES2
 # which, like OW_NHANES, is TRUE if a member of family is obese and FALSE otherwise
 
-# OW_NHANES2 <- your code here
+ OW_NHANES2 = (family$bmi > OWval[OW_limit])
 
 
 # Q3.
@@ -69,9 +69,12 @@
 # To do this, you need to know the formula for BMI,
 # bmi = (weight/2.2) / (2.54/100 * height)^2
 # and use it to write weight as a function of bmi and height.
-
+calcWeight = function(bmi, height)
+{
+	return (bmi * (2.54/100 * height)^2) * 2.2
+}
 # Now calculate OW_weight 
-# OW_weight <- your code here
+ OW_weight <- your code here
 
 
 # Make a plot of actual weight against the weight at which they would
@@ -89,7 +92,7 @@
 # footage and location of each house sold from April 2003 to May 2006.
 # Use the load() command to load the data into R/RStudio.
 
-# load( your code here )
+load("SFHousing.rda")
 
 
 # Q4. (not graded)
