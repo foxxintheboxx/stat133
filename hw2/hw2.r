@@ -74,15 +74,15 @@ calcWeight = function(bmi, height)
 	return (bmi * (2.54/100 * height)^2) * 2.2
 }
 # Now calculate OW_weight 
- OW_weight <- your code here
+OW_weight = OWval[OW_limit] * (2.54/100 * family$height)^2 * 2.2
 
 
 # Make a plot of actual weight against the weight at which they would
 # be overweight using the plot function.
 # use the abline() function to include a red identity line.
 
-# plot( your code here )
-# abline( your code here )
+plot(family$weight, OW_weight)
+abline(a,b,)
 
 
 #PART 2.  San Framcisco Housing Data
@@ -102,21 +102,21 @@ load("SFHousing.rda")
 # How many cities are in the dataset, store the answer in the variable
 # n.cities.
 
-# n.cities <- your code here
+n.cities = dim(cities)[1]
 
 
 # How many house sales are included in the dataset?  Store the answer in
 # the variable n.housesale.
 
-# n.housesale <- your code here
+n.housesale = dim(housing)[1]
 
 
 # How many of these house sales were in Berkeley?
-# n.housesale.Berk <- sum(housing$city=="Berkeley")
+n.housesale.Berk <- sum(housing$city=="Berkeley")
 
 # Create a vector with the names of all variables in housing.
 
-# all.housing.variable <- your code here
+all.housing.variable = objects(housing)
 
 
 
@@ -131,12 +131,12 @@ load("SFHousing.rda")
 # Create two vectors, one with the names of the cities we want to keep,
 # one with the names of the variables we want to use.
 
-# local.cities <- your code here
+local.cities = c("Albany", "Berkeley", "Piedmont", "Emeryville")
 
-# some.housing.variables <- your code here
+some.housing.variables <- c("city", "zip", "price", "br", "bsqft", "year")
 
 # Create the smaller data frame
-# BerkArea <- your code here
+BerkArea <- subset(housing[some.housing.variables], city %in% local.cities)
 
 
 # Q6.
