@@ -199,11 +199,12 @@ legend(legend = 1:5, fill = rCols, "topright")
 
 plot(pricePsqft ~ year, 
 	data = BerkArea, 
-	main = "Housing Prices Per Sqft against Year",
+	main = "Housing prices in the Berkeley Area",
 	xlab = "Year",
 	ylab = "Price per square foot",
 	col = brCols, pch 19, cex = 0.5)
-# legend( your code here )
+
+legend(legend = 1:5, fill = rCols, "topright")
 
 ## Food for thought (not graded):
 ## Examine the plot.  Do you see any interesting features.
