@@ -157,7 +157,7 @@ BerkArea$pricePsqft <- (BerkArea$price / BerkArea$bsqft)
 # if this number is greater than 5, it is set to 5.  That is, if a house has 5 or more
 # bedrooms then br5 will be 5. Otherwise it will be the number of bedrooms.
 
-br5 <- 5 * as.numeric(BerkArea$br > 5) + BerkArea$br * as.numeric(BerkArea$br < 5)
+br5 <- 5 * as.numeric(BerkArea$br > 5) + BerkArea$br * as.numeric(BerkArea$br <= 5)
 
 
 
@@ -197,7 +197,12 @@ legend(legend = 1:5, fill = rCols, "topright")
 # in the dataframe).  Color the observations by number of bedrooms just as before.
 # Make sure that the axes are labelled correctly.
 
-# plot( your code here )
+plot(pricePsqft ~ year, 
+	data = BerkArea, 
+	main = "Housing Prices Per Sqft against Year",
+	xlab = "Year",
+	ylab = "Price per square foot",
+	col = brCols, pch 19, cex = 0.5)
 # legend( your code here )
 
 ## Food for thought (not graded):
