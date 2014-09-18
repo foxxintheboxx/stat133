@@ -52,13 +52,13 @@ load("family.rda")
 # (i.e. use as.numeric() to coerce the factor vector storing gender to a
 # numeric vector)
 
-OW_limit = as.numeric(family$gender)
+OW_limit = OWval[as.numeric(family$gender)]
 
 
 # Finally, us OW_limit and bmi to create the desired logical vector, called OW_NHANES2
 # which, like OW_NHANES, is TRUE if a member of family is obese and FALSE otherwise
 
- OW_NHANES2 = (family$bmi > OWval[OW_limit])
+ OW_NHANES2 = (family$bmi > OW_limit)
 
 
 # Q3.
@@ -69,20 +69,17 @@ OW_limit = as.numeric(family$gender)
 # To do this, you need to know the formula for BMI,
 # bmi = (weight/2.2) / (2.54/100 * height)^2
 # and use it to write weight as a function of bmi and height.
-calcWeight = function(bmi, height)
-{
-	return (bmi * (2.54/100 * height)^2) * 2.2
-}
+
 # Now calculate OW_weight 
-OW_weight = OWval[OW_limit] * (2.54/100 * family$height)^2 * 2.2
+OW_weight = OW_limit * (2.54/100 * family$height)^2 * 2.2
 
 
 # Make a plot of actual weight against the weight at which they would
 # be overweight using the plot function.
 # use the abline() function to include a red identity line.
 
-plot(family$weight, OW_weight)
-abline(a,b,)
+plot(OW_weight, family$weight)
+abline(a = 0,b = 1, col = "red")
 
 
 #PART 2.  San Framcisco Housing Data
@@ -136,7 +133,7 @@ local.cities = c("Albany", "Berkeley", "Piedmont", "Emeryville")
 some.housing.variables <- c("city", "zip", "price", "br", "bsqft", "year")
 
 # Create the smaller data frame
-BerkArea <- subset(housing[some.housing.variables], city %in% local.cities)
+BerkArea <- housing[housing$city %in% local.cities, some.housing.variables]
 
 
 # Q6.
@@ -145,21 +142,22 @@ BerkArea <- subset(housing[some.housing.variables], city %in% local.cities)
 # Use the quantile function to determine the 99th percentile of price and bsqft
 # and eliminate all of those houses that are above either of these 99th percentiles
 # Call this new data frame BerkArea, as well. It should have 3999 oobservations.
+#TODO
 
-# BerkArea <- your code here
+BerkArea <- BerkArea[BerkArea$price <= quantile(BerkArea$price, probs = 0.99) & BerkArea$bsqft <= quantile(BerkArea$bsqft, probs = 0.99, na.rm = TRUE),]
 
 # Q7.
 # Create a new vector that is called pricePsqft by dividing the sale price by the square footage
 # Add this new variable to the data frame.
 
-# BerkArea$pricePsqft <- your code here
+BerkArea$pricePsqft <- (BerkArea$price / BerkArea$bsqft)
 
 #  Q8.
 # Create a vector called br5 that is the number of bedrooms in the house, except
 # if this number is greater than 5, it is set to 5.  That is, if a house has 5 or more
 # bedrooms then br5 will be 5. Otherwise it will be the number of bedrooms.
 
-# br5 <- your code here
+br5 <- 5 * as.numeric(BerkArea$br > 5) + BerkArea$br * as.numeric(BerkArea$br < 5)
 
 
 
@@ -167,14 +165,14 @@ BerkArea <- subset(housing[some.housing.variables], city %in% local.cities)
 # Use the rainbow function to create a vector of 5 colors, call this vector rCols.
 # When you call this function, set the alpha argument to 0.25 (we will describe what this does later)
 
-# rCols <- your code here
+rCols <- rainbow(5, alpha = 0.25)
 
 
 # Create a vector called brCols of 4059 colors where each element's
 # color corresponds to the number of bedrooms in the br5.
 # For example, if the element in br5 is 3  then the color will be the third color in rCols.
 
-# brCols <- your code here
+brCols <- rCols[br5]
 
 
 ######
