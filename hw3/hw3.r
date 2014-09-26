@@ -84,7 +84,7 @@ wr.name <- wr1500m[wr1500m$times == min(wr1500m$times),]$athlete
 
 times_sec <- wr1500m$time + 180
 wr1500m$times_sec <- times_sec
-#wr1500m <- wr1500m
+wr1500m <- wr1500m
 plot(times_sec ~ year, data = wr1500m, type = "s")
 
 
@@ -101,7 +101,7 @@ months <- wr1500m$month/12
 months[is.na(months)] <- 0.5
 new_year <- wr1500m$year + months
 wr1500m$new_year <- new_year
-#TODO wr1500m <- wr1500m
+wr1500m <- wr1500m
 plot(times_sec ~ new_year, data = wr1500m, type = "s")
 
 
@@ -260,7 +260,6 @@ text(log(top5$pop),log(top5$GDPPP),  as.character(top5$ISO))
 # where the countries are filled with a light grey color.
 
 ## you only need to run these two lines once:
-install.packages("maps")
 library("maps")
 
 world <- map("world", fill = TRUE, col = "light grey")
@@ -278,7 +277,6 @@ world <- map("world", fill = TRUE, col = "light grey")
 
 wonMedal <- SO2012Ctry[SO2012Ctry$Total > 0,]
 
-# world <- your code here
 symbols(wonMedal$longitude, 
  	wonMedal$latitude, 
  	circles = wonMedal$Total, inches = 0.3, add = TRUE)
@@ -296,7 +294,7 @@ symbols(wonMedal$longitude,
 # e.g. myColor = "#FEB24CAA" or   "#FEB24C88"
 
 # You only need to call these two lines once:
-install.packages("RColorBrewer")
+#install.packages("RColorBrewer")
  library("RColorBrewer")
 
 display.brewer.all()
@@ -380,7 +378,7 @@ barplot(athTab2, beside = set.beside)
 # Which makes a more interesting visual comparison, plot 1 or 2?
 # store your answer (1 or 2) in best.plot.
 
-# best.plot <- your answer
+best.plot <- barplot(athTab2)
 
 
 # Q16. Notice that the bars are in alphabetical order by sport.
@@ -393,8 +391,8 @@ barplot(athTab2, beside = set.beside)
 # the rows/cols. The resulting barplot should show bars in 
 # increasing height.
 
-# orderSport <- your code here
-# barplot( your code here )
+orderSport <- order(table(athletes$Sport))
+barplot(athTab2[,orderSport])
 
 
 # Q17. Finally to make the plot more informaation rich, try turning
@@ -405,7 +403,7 @@ barplot(athTab2, beside = set.beside)
 # Also find and use a parameter to shrink the text for these labels. 
 # Lastly, add a title to the plot.
 
-
+barplot(athTab2[,orderSport], las = 3, beside = TRUE, cex.names = 0.5, main = "Olympics by Number of Athletes and their Genders")
 # This was the final version of the 4th plot.
 
 # You are DONE.
