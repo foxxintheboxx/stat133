@@ -202,7 +202,7 @@ plot(pricePsqft ~ year,
 	main = "Housing prices in the Berkeley Area",
 	xlab = "Year",
 	ylab = "Price per square foot",
-	col = brCols, pch 19, cex = 0.5)
+	col = brCols, pch = 19, cex = 0.5)
 
 legend(legend = 1:5, fill = rCols, "topright")
 
