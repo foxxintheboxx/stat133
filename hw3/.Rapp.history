@@ -1,3 +1,4 @@
 load("/Users/ianfox/Downloads/SFHousing.rda")
 setwd("/Users/ianfox/Desktop/stat133/hw3")
 source("hw3.r")
+source("hw3.r")
