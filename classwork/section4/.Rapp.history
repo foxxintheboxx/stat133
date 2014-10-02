@@ -1,0 +1,41 @@
+load("/Users/ianfox/Downloads/SFHousing.rda")
+setwd("~/desktop/stat33")
+setwd("~/desktop/stat133")
+setwd("classwork")
+setwd("section4")
+loaload('ex1-data.rda')
+load('ex1-data.rda')
+data.matrix
+col.90 <- apply(data.matrix, 2, function(col quantile(col, 0.9)))
+col.90 <- apply(data.matrix, 2, function(col) quantile(col, 0.9)))
+col.90 <- apply(data.matrix, 2, function(col) quantile(col, 0.9))
+col.90
+min.max.row <- apply(data.matrix, 1, range)
+min.max.row
+iris
+table(iris)
+table(iris)[0]
+table(iris)[2]
+table(iris)[4]
+iris
+levels(iris)
+levels(iris$species)
+levels(iris$Species)
+levels(iris$Species), functions(s) mean(iris$Petal.Length[iris$Species == s])
+levels(iris$Species), functions(s) mean(iris$Petal.Length[iris$Species == ,s]))
+function (x) {}
+function (x) {
+}
+x = function(x) {}
+x = function(x) {}
+x = function(x) {
+return apply
+x = function(x) {
+return (apply) }
+x = function() {
+retunr (apply) }
+x = function() {
+return (apply) }
+x(data.matrix, 1, function(y) (x))
+x
+x()(data.matrix, 1, function(x) (x))

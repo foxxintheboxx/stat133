@@ -1,3 +1,4 @@
+
 library(RUnit)
 errMsg = function(err) print(paste("ERROR:", err))
 load('hw4-tests.rda') 
@@ -18,8 +19,13 @@ load('hw4-tests.rda')
 truncate <- function(input.vector, trim) {
 
         stopifnot(0<=trim & trim<=0.5) # this line makes sure trim in [0,0.5]
+        bound.lower = paste(as.character(100*trim), "%", sep = "")
+        bound.upper = paste(as.character((1 - trim) * 100), "%", sep = "")
+        quantile.lower = quantile(input.vector, trim)
+        quantile.upper = quantile(input.vector,1 - trim )
 
             # your code here
+        input.vector[which(input.vector >= quantile.lower[bound.lower] & input.vector <= quantile.upper[bound.upper])]
 
     }
 
@@ -46,7 +52,8 @@ tryCatch(checkIdentical(integer(0), truncate(1:6, trim=0.5)),
 # second the upper bound
 
 outlierCutoff <- function(data) {
-        # your code here
+  # your code here
+  apply(data, 2, function(x) (c(median(x)  - 1.5*(quantile(x, 0.75, names = FALSE) - quantile(x, 0.25, names = FALSE)), median(x) + 1.5*(quantile(x, 0.75, names = FALSE) - quantile(x, 0.25, names = FALSE)))))
 
 }
 
@@ -77,7 +84,12 @@ removeOutliers <- function(data, max.outlier.rate) {
 
         stopifnot(max.outlier.rate>=0 & max.outlier.rate<=1)
 
-            # your code here
+        outlier.cutoff = outlierCutoff(data)
+        variables = ncol(data)
+        apply(ex1.test, 1, function(x)(sum(as.numeric(x > outlier.cutoff.t[1,] & x < outlier.cutoff.t[2,])) / variables ))
+        boolean.matrix = apply(data, 1, function(x)(sum(as.numeric(!(x > outlier.cutoff.t[1,] & x< outlier.cutoff.t[2,])))/variables < max.outlier.rate))
+        data[boolean.matrix,]
+
     }
 
 tryCatch(checkEquals(remove.outlier.t, removeOutliers(ex1.test, 0.25), ),
@@ -104,9 +116,10 @@ tryCatch(checkEquals(remove.outlier.t, removeOutliers(ex1.test, 0.25), ),
 meanByLevel <- function(data) {
 
         # your code here
+        sapply(data[,!(sapply(data, is.factor))] , function(col) {by(col, data[,sapply(data, is.factor)], mean)})
 }
 
-tryCatch(checkIdentical(mean.by.level.t, meanByLevel(iris), checkNames=F),
+tryCatch(checkIdentical(mean.by.level.t, meanByLevel(iris)),
          error=function(err) errMsg(err))
 
 
@@ -133,9 +146,10 @@ tryCatch(checkIdentical(mean.by.level.t, meanByLevel(iris), checkNames=F),
 stdLevelDiff <- function(data) {
 
         # your code here
+        sapply(data[,!(sapply(data, is.factor))], function(col) {(by(col,data[, sapply(data, is.factor)], mean) - mean(col))/sd(col)})
 }
 
-tryCatch(checkIdentical(std.level.diff.t, abs(stdLevelDiff(iris)), checkNames=F),
+tryCatch(checkIdentical(std.level.diff.t, abs(stdLevelDiff(iris))),
                   error=function(err) errMsg(err))
 
 
@@ -158,10 +172,17 @@ tryCatch(checkIdentical(std.level.diff.t, abs(stdLevelDiff(iris)), checkNames=F)
 #   variance given by <var> and mean given by the jth entry of <means>.
 
 simpleNormSim <- function(means, sim.size=50, var=1) {
-
         # your code here
+        lapply(means, function(mean) { rnorm(sim.size, mean, sqrt(var) )})
+
 }
 
 set.seed(47)
 tryCatch(checkIdentical(simple.norm.sim.t, simpleNormSim(c(25, 50, 75))),
                   error=function(err) errMsg(err))
+
+
+
+
+
+
