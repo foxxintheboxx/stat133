@@ -1,3 +1,8 @@
+
+
+library(RUnit)
+errMsg = function(err) print(paste("ERROR:", err))
+
 # Implement the function "listLengths". Your function should take the
 # follwoing arguments:
 #
@@ -8,9 +13,13 @@
 # <element.lengths>: a numeric vector whose entries are the lengths of each
 #   element of <data.list>
 
+load("hw5-tests.rda")
+
 listLengths <- function(data.list) {
 
     # your code here
+    sapply(data.list, function(c) (length(c)))
+
 }
 
 tryCatch(checkEquals(list.lengths.t, listLengths(ex3.test2)),
@@ -36,6 +45,9 @@ tryCatch(checkEquals(list.lengths.t, listLengths(ex3.test2)),
 standMatrixVariables <- function(data.matrix) {
 
     # your code here
+
+    apply(data.matrix, 2, function(i) { apply(data.matrix, 2, function(j) {(mean(i) - mean(j)) / sd(c(i, j))} )} )
+
 }
 
 tryCatch(checkEquals(stand.matrix.variables.t,
@@ -45,7 +57,8 @@ tryCatch(checkEquals(stand.matrix.variables.t,
 
 # Load in the "babies.csv" dataset for this problem. Implement the function
 # "testGroupsGestation" that takes the following arguments:
-#
+read.csv("babies.csv")
+babies <- read.csv("babies.csv")
 # <data>: any subset of the babies.csv dataset
 # <group1.idcs>: a numeric vector giving the indices of some subset of <data>
 # <group2.idcs>: a numeric vector giving the indices of some other subset of <data>. 
@@ -67,6 +80,8 @@ testGroupsGestation <- function(data, group1.idcs, group2.idcs,
     stopifnot(!any(group1.idcs %in% group2.idcs))
 
     # your code here
+    t.test(data$gestation[group1.idcs], data$gestation[group2.idcs],
+           alternative = test.alternative)
 }
 
 tryCatch(checkEquals(test.groups.gestation.t$p.value,
@@ -78,8 +93,8 @@ tryCatch(checkEquals(test.groups.gestation.t$p.value,
 # period for babies of smoking mothers and non-smoking mothers. Store this
 # variable as <smoking.test>
 
-# your code here
-#smoke.idcs <- your code here
-#non.smoke.idcs <- your code here
-#smoking.test <- your code here
+smoke.idcs <- which(babies$smoke == 1)
+non.smoke.idcs <- which(babies$smoke == 0)
+smoking.test <- testGroupsGestation(babies, smoke.idcs,non.smoke.idcs, 
+                                    test.alternative = 'greater')
 
