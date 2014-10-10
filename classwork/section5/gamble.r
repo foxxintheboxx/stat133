@@ -30,7 +30,12 @@ betFun <- function(current.wealth,  previous.winnings=NA) {
 # 0, the simulation should end.
 gamble <- function(bet.FUN, init.wealth=50, prob.win=0.52, max.turns=25) {
 
+	current.wealth <- init.wealth
+	bet <- bet.FUN(current.wealth, 0)
+	games <- rbinom(max.turns, 1,prob.win)
+	for (i in 1:max.turns) {
 
+	}
 }
 
 
