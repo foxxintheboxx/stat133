@@ -22,6 +22,7 @@ listLengths <- function(data.list) {
 
 }
 
+
 tryCatch(checkEquals(list.lengths.t, listLengths(ex3.test2)),
          error=function(err) errMsg(err))
 
