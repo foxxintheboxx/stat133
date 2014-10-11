@@ -1,250 +1,254 @@
-apply(matrix,2, function(x) (x))
-apply(matrix,2, function(x) (x[5] - x[1]))
-matrix.iqr = apply(matrix,2, function(x) (x[5] - x[1]))
-lapply(matrix.iqr, function(x) (x*1.5))
-apply(matrix.iqr, function(x) (x*1.5))
-apply(matrix.iqr, 2,function(x) (x*1.5))
-dim(matrix.iqr)
-dim(matrix)
-matrix.iqr = apply(matrix,2, function(x) (c((x[5] - x[1]) * 1.5, (x[5] - x[1]) * -1.5)))
-matrix.iqr
-names(matrix.iqr)
-matrix.iqr = apply(matrix,2, function(x) (x[5] - x[1]))
-apply(matrix.iqr, function(x) (c(x * 1.5, x * -1.5)))
-lapply(matrix.iqr, function(x) (c(x * 1.5, x * -1.5)))
-class(lapply(matrix.iqr, function(x) (c(x * 1.5, x * -1.5))))
-apply(matrix.iqr, 2, function(x) (c(x * 1.5, x * -1.5)))
-class(matrix.iqr)
-matrix.iqr = apply(matrix,2, function(x) (c((x[5] - x[1]) * 1.5, (x[5] - x[1]) * -1.5)))
-matrix.iqr
-dim(matrix.iqr)
-apply(matrix, 2, function(x) (x[2]))
-apply(matrix, 2, function(x) (x[5]))
-apply(matrix, 2, function(x) (x[5] - x[2]))
-apply(matrix, 2, function(x) (c(x[5] - x[2], 1)))
-apply(matrix, 2, function(x) (c(1, 1)))
-apply(matrix, 2, function(x) (c(x[5] - x[2], 1)))
-apply(matrix, 2, function(x) (c((x[5] - x[2]) * 1.5, 1)))
-apply(matrix, 2, function(x) (c((x[5] - x[2]) * -1.5, 1)))
-apply(matrix, 2, function(x) (c((x[5] - x[2]) * -1.5, (x[5] - x[2]) * 1.5)))
-apply(matrix, 2, function(x) (c((x[3]* -1.5, (x[3]) * 1.5)))
-apply(matrix, 2, function(x) (c((x[3]* -1.5, (x[3] * 1.5)))
-apply(matrix, 2, function(x) (c(x[3]* -1.5, (x[3] * 1.5)))
-)
-apply(matrix, 2, function(x) (c((x[5] - x[2])*x[3] * -1.5, (x[5] - x[2])*x[3] * 1.5)))
-apply(matrix, 2, function(x) (c(0 + (x[5] - x[2])*x[3] * -1.5, (x[5] - x[2])*x[3] * 1.5)))
-outlier.cutoff.t
-apply(matrix, 2, function(x) (c(x[3] + (x[5] - x[2]) * -1.5, x[3] + (x[5] - x[2]) * 1.5)))
-class(apply(matrix, 2, function(x) (c(x[3] + (x[5] - x[2]) * -1.5, x[3] + (x[5] - x[2]) * 1.5))))
+iris
+iris.without = iris[,lapply(iris, class) != "factor"]
+iris.without
+aggregate(iris.without, iris[,lapply(iris, class) == "factor"], mean)
+aggregate(iris.without, lapply(iris, class), mean)
+lapply(iris, class)
+class(iris[,lapply(iris, class) == "factor"])
+iris[,lapply(iris, class) == "factor"]
+lapply(iris[,lapply(iris, class) == "factor"], function(x) (x))
+aggregate(iris.without, lapply(iris[,lapply(iris, class) == "factor"], function(x) (x)), mean)
+x  =lapply(iris[,lapply(iris, class) == "factor"], function(x) (x))
+nrow(x)
+dim(x)
+length(x)
+length(iris.without)
+class(iris.without)
+aggregate(iris.without, list(iris[,lapply(iris, class) == "factor"]), mean)
+list(iris[,lapply(iris, class) == "factor"])
+iris.without
+mean.by.level.t
 source("hw4.r")
-outlier.cutoff.t
-min = apply(matrix,2 function(x) (c(x[3] + (x[5] - x[2]) * -1.5)))
-min = apply(matrix,2, function(x) (x[3] + (x[5] - x[2]) * -1.5))
-min
-max = apply(matrix,2, function(x) (x[3] + (x[5] - x[2]) * 1.5))
-apply(matrix, 2, function(x) (min, max)))
-apply(matrix, 2, function(x) (c(min, max))))
-apply(matrix, 2, function(x) (c(min, max)))
-apply(matrix, 1, function(x) (c(min, max)))
-apply(matrix, 2, function(x) (c(min, max)))
-remove.outlier.t
-ncols(remove.outlier.r)
-ncol(remove.outlier.r)
-ncol(remove.outlier.t)
-nrow(remove.outlier.t)
+meanByLevel(iris)
+meanByLevel(iris) == mean.by.level.t
+mean.by.level.t
+source("hw4.r")
+class(mean.by.level.t)
+class(meanByLevel(iris) )
+class(meanByLevel(iris))
+matrix(meanByLevel(iris))
+sapply(iris, class)
+lapply(data, class)
+lapply(iris class)
+lapply(iris, class)
+v.class = sapply(iris, class)
+v.class
+meanByLeve(iris)
+meanByLevel(iris)
+data.matrix(meanByLevel(iris))
+mean.by.level.t
+mean.by.level.t[0]
+mean.by.level.t[1]
+data[,lapply(data, class) != "factor"]
+v.class
 ex1.test
-ex1.test[,]
-ex1.test[x>1,]
-ex1.test[ex1.test >1,]
-ex1.test$v1
-ex1.test$V1
-ex1.test[1,]
-ex1.test[1:nrow(ex1.test),]
-ex1.test[1:nrow(ex1.test) > 1,]
-ex1.test[,1:nrow(ex1.test)]
-ex1.test[1, ]
+rowsum(ex1.test)
+rowsum(ex1.test, "sum", reorder = FALSE)
+rowsum(ex1.test, 1:nrow(ex1.test), reorder = FALSE)
+rowsum(ex1.test, 100, reorder = FALSE)
+rowsum(ex1.test, 1:100, reorder = FALSE)
+rowsum(ex1.test, 10, reorder = FALSE)
+rowsum(ex1.test, 1:90, reorder = FALSE)
+rowsum(ex1.test, 1:100, reorder = FALSE)
+UCBAdmissions
+rowSums(UCBAdmissions); rowSums(UCBAdmissions, dims = 2)
+rowSums(ex1.test)
+ex1.test2 = ex1.test
+ex1.test2$sums = rowSums(ex1.test)
+ex1.test2
+rowSums(ex1.test[,1])
+rowSums(ex1.test[1,1])
+rowSums(ex1.test[1,])
+rowSums(ex1.test[2,])
+rowSums(ex1.test[3,])
+outliers
 outliers = outlierCutoff(ex1.test)
 outliers
-ex1.test[1:nrow(ex1.test)]
-ex1.test[1:nrow(ex1.test),]
-ex1.test[1:nrow(ex1.test), 1]
-ex1.test[1:nrow(ex1.test), 2]
-ex1.test[1:nrow(ex1.test), 4]
-ex1.test[1:nrow(ex1.test), 2]
-ex1.test[1:nrow(ex1.test) - 9, 2]
-ex1.test[1, ]
-ex1.test[1, ] > outlier[0]
-ex1.test[1, ] > outlier.cutoff[0]
-ex1.test[1, ] > cutoff.outlier[-]
-ex1.test[1, ] > cutoff.outlier[0]
-objects()
-ex1.test[1, ] > outlier[0]
-ex1.test[1, ] > outliers[0]
-ex1.test[1, ] > outliers[1]
-ex1.test[1, ] > outliers
-ex1.test[1:nrow(ex1.test), ] > outliers
-as.numeric(ex1.test[1:nrow(ex1.test), ] > outliers)
-remove.outliers.t
-remove.outlier.t
-as.numeric(ex1.test[1:nrow(ex1.test), ] > outliers[0] & ex1.test[1:nrow(ex1.test), ] < outlier[1])
-as.numeric(ex1.test[1:nrow(ex1.test), ] > outliers[0,] & ex1.test[1:nrow(ex1.test), ] < outlier[1,])
-outliers[1]
-outliers
-outliers[,]
-outliers[,0]
-outliers[,1]
-outliers
-outliers[0] = [0,]
-outlier
-outlier[,0]
-outliers[,0]
-outliers[,1]
-outliers[,2]
 outliers[1,]
-matrix(outliers[1,], 1, 5)
-matrix(c(outliers[1,], outliers[2,]), 2, 5)
-ex1.test[1:nrow(ex1.test),] < outliers[1,]
-ex1.test[1:nrow(ex1.test),] > outliers[1,] & ex1.test[1:nrow(ex1.test),] < outliers[,2]
+outliers[1]
+ex1.test > outliers
+ex1.test > -1.979
+ex1.test > c(-1.979, -1.47375, -2.3533, -2.69318, -2.248593)
+ex1.test[1]
+ex1.test[,1]
+ex1.test[1,1]
+ex1.test[,1] == ex1.test[1,]
+sapply(iris, class)
+table(iris)
+class(table(iris))
+apply(iris, list(sapply(iris, class), mean))
+apply(iris, list(sapply(iris, class), FUN = mean))
+apply(iris, list(sapply(iris, class), FUN = mean))
+by(iris, 1:10, mean)
+by(iris, 1:nrow(iris), mean)
+require(stats)#
+by(warpbreaks[, 1:2], warpbreaks[,"tension"], summary)#
+by(warpbreaks[, 1],   warpbreaks[, -1],       summary)#
+by(warpbreaks, warpbreaks[,"tension"],#
+   function(x) lm(breaks ~ wool, data = x))
 outliers
-matrix
+colnames(outliers)
+rownames(outliers)
+sapply(apply(data, 2,
+)
+)
+help(apply)
+sapply?
+)
+?sapply
+matrix.sum = apply(ex1.test, 2, summary)
+matrix.sum
+matrix.sum$1
+matrix.sum$V1
+sapply(matrix.sum, function(x) (x))
+apply(matrix.sum, 2, function(x) (x[5] - x[2]))
+lower = apply(matrix.sum, 2, function(x) (x[5] - x[2]))
+iqr = apply(matrix.sum, 2, function(x) (x[5] - x[2]))
+median = apply(matrix.sum, 2, function(x) (x[3]))
+apply(data, 2, function(x) (median + iqr * -1.5, media + iqr * 1.5)))
+apply(data, 2, function(x) (c(median + iqr * -1.5, media + iqr * 1.5)))
+apply(ex1.test, 2, function(x) (c(median + iqr * -1.5, media + iqr * 1.5)))
+apply(ex1.test, 2, function(x) (c(median + iqr * -1.5, median + iqr * 1.5)))
+apply(matrix.sum, 2, function(x) (c(median + iqr * -1.5, median + iqr * 1.5)))
+apply(matrix.sum, 2, function(x) (c(x[3] + (x[5] - x[2]) * -1.5, x[3] + (x[5] - x[2]) * 1.5)))
+apply(names(ex1.test), 2, function(x) (c(median + iqr * -1.5, median + iqr * 1.5)))
+apply(matrix(names(ex1.test) + c(1:2), 2, function(x) (c(median + iqr * -1.5, median + iqr * 1.5)))
+)
+apply(matrix(names(ex1.test) + c(1:2)), 2, function(x) (c(median + iqr * -1.5, median + iqr * 1.5)))
+apply(matrix(c(1:2)), 2, function(x) (c(median + iqr * -1.5, median + iqr * 1.5)))
+apply(matrix(c(1:3)), 2, function(x) (c(median + iqr * -1.5, median + iqr * 1.5)))
+apply(matrix(c(1:2)), 2, function(x) (c(median + iqr * -1.5, median + iqr * 1.5)))
+apply(matrix(c(1:2)), 1, function(x) (c(median + iqr * -1.5, median + iqr * 1.5)))
+apply(ex1.test, 1, function(x) (c(median + iqr * -1.5, median + iqr * 1.5)))
+apply(ex1.test, 2, function(x) (c(median + iqr * -1.5, median + iqr * 1.5)))
+iqr
+iqr + iqr
+matrix(iqr, iqr)
+matrix(iqr)
+apply(ex1.test, 1, function(x) (c(median + iqr * -1.5, median + iqr * 1.5)))
+apply(ex1.test, 2, function(x) (c(median + iqr * -1.5, median + iqr * 1.5)))
+apply(ex1.test[,], 2, function(x) (c(median + iqr * -1.5, median + iqr * 1.5)))
+apply(ex1.test[names(ex1.test)], 2, function(x) (c(median + iqr * -1.5, median + iqr * 1.5)))
+apply(ex1.test[names(ex1.test)], 2, function(x) (c(median[x] + iqr[x] * -1.5, median[x] + iqr[x] * 1.5)))
+apply(ex1.test[names(ex1.test)], 2, function(x) (c([x])))
+apply(ex1.test[names(ex1.test)], 2, function(x) (c([x]))
+apply(ex1.test[names(ex1.test)], 2, function(x) (c(x)))
+apply(ex1.test[names(ex1.test)], 2, function(x) (c(median[x] + iqr[x] * -1.5, median[x] + iqr[x] * 1.5)))
+apply(ex1.test[names(ex1.test)], 2, function(x) (c(median + iqr * -1.5, median + iqr * 1.5)))
+apply(ex1.test[names(ex1.test)], 2, function(x) (c(median + iqr * -1.5, median + iqr * 1.5)))
+apply(ex1.test[names(ex1.test)], 1, function(x) (c(median + iqr * -1.5, median + iqr * 1.5)))
+apply(ex1.test[names(ex1.test)], 2, function(x) (c(median[x] + iqr[x] * -1.5, median[x] + iqr[x] * 1.5)))
+apply(ex1.test[names(ex1.test)], 1, function(x) (c(median + iqr * -1.5, median + iqr * 1.5)))
+apply(ex1.test[names(ex1.test)], 2, function(x) (c(median[x] + iqr[x] * -1.5, median[x] + iqr[x] * 1.5)))
+apply(ex1.test[names(ex1.test)], 1, function(x) (c(median + iqr * -1.5, median + iqr * 1.5)))
+apply(ex1.test[names(ex1.test)], 2, function(x) (c(median[x] + iqr[x] * -1.5, median[x] + iqr[x] * 1.5)))
+apply(ex1.test[names(ex1.test)], 1, function(x) (c(median + iqr * -1.5, median + iqr * 1.5)))
+apply(ex1.test[names(ex1.test)], 2, function(x) (c(median[x] + iqr[x] * -1.5, median[x] + iqr[x] * 1.5)))
+apply(ex1.test[names(ex1.test)], 2, function(x) (c(median[x] + iqr[x] * -1.5, median[x] + iqr[x] * 1.5)))
+apply(matrix.summary, 2, function(x) (c(x[3] + (x[5] - x[2]) * -1.5, x[3] + (x[5] - x[2]) * 1.5)))
+apply(ex1.test[names(ex1.test)], 2, function(x) (c(x)))
+apply(ex1.test[names(ex1.test)], 2, function(x) (summary(x)[1]))
+apply(ex1.test[names(ex1.test)], 2, function(x) (summary(x)[1] - summary(x)[2] ))
+apply(ex1.test[names(ex1.test)], 2, function(x) (c(summary(x)[1] - summary(x)[2], summary(x)[1] - summary(x)[2])))
+apply(ex1.test[names(ex1.test)], 2, function(x) (c(summary(x)[1] - summary(x)[2], summary(x)[3] - summary(x)[2])))
+apply(ex1.test[names(ex1.test)], 2, function(x) (c(sum(x), colsum(x))))
+apply(ex1.test[names(ex1.test)], 2, function(x) (c(sum(x), sum(x))))
+apply(ex1.test[names(ex1.test)], 2, function(x) (c(median(x), sum(x))))
+apply(ex1.test[names(ex1.test)], 2, function(x) (c(median(x)  - 1.5*(quantile(x)[4] - quantile(x)[2]), median(x) + 1.5*(quantile(x)[4] - quantile(x)[2]))))
+apply(ex1.test[names(ex1.test)], 2, function(x) (c(median(x)  - 1.5*(quantile(x, 0.75) - quantile(x)[2]), median(x) + 1.5*(quantile(x)[4] - quantile(x)[2]))))
+apply(ex1.test[names(ex1.test)], 2, function(x) (c(median(x)  - 1.5*(quantile(x, 0.75) - quantile(x, 0.25)[2]), median(x) + 1.5*(quantile(x)[4] - quantile(x)[2]))))
+apply(ex1.test[names(ex1.test)], 2, function(x) (c(median(x)  - 1.5*(quantile(x, 0.75) - quantile(x, 0.25)[1]), median(x) + 1.5*(quantile(x)[4] - quantile(x)[2]))))
+apply(ex1.test[names(ex1.test)], 2, function(x) (c(median(x)  - 1.5*(quantile(x, 0.75) - quantile(x, 0.25)), median(x) + 1.5*(quantile(x)[4] - quantile(x)[2]))))
+apply(ex1.test[names(ex1.test)], 2, function(x) (c(median(x)  - 1.5*(quantile(x, 0.75) - quantile(x, 0.25)), median(x) + 1.5*(quantile(x)[4] - quantile(x)[2]))))
+apply(ex1.test[names(ex1.test)], 2, function(x) (c(median(x)), median(x))))
+?quantile
+apply(ex1.test[names(ex1.test)], 2, function(x) (c(median(x)  - 1.5*(quantile(x, 0.75, names = FALSE) - quantile(x, 0.25, names = FALSE)), median(x) + 1.5*(quantile(x, names = FALSE)[4] - quantile(x, names = FALSE)[2]))))
+source("hw4.r")
+source("hw4.r")
+outlier.cutoff.t == outlierCutoff(ex1.test)
+source("hw4.r")
+source("hw4.r")
+outliers = outlierCutoff(ex1.test)
 outliers
-ex1.test
-ex1.test[99,] > outliers[1,] & ex1.test[99,] < outliers[,2]
-outliers
-ex1.test[99,] > outliers[1,]
-ex1.test[99,] < outliers[,2]
-outliers[2,]
-ex1.test[99,5] < outliers[,2]
-ex1.test[99,5] < outliers[5,2]
-ex1.test[99,5] < outliers[4,2]
-outliers[,2]
-outliers[2,]
-ex1.test[99,] > outliers[1,] & ex1.test[99,] < outliers[2,]
-ex1.test[1:nrow(ex1.test),] > outliers[1,] & ex1.test[1:nrow(ex1.test),] < outliers[2,]
-remove.outlier.t
-nrow(remove.outlier.t)
-nrow(ex1.test)
-ex1.test[65,] > outliers[1,] & ex1.test[65,] < outliers[2,]
-ex1.test[36,] > outliers[1,] & ex1.test[36,] < outliers[2,]
-ex1.test[1:100,] > outliers[1,] & ex1.test[1:100),] < outliers[2,]
-ex1.test[1:100,] > outliers[1,] & ex1.test[1:100,] < outliers[2,]
-ex1.test[36,] > outliers[1,] & ex1.test[36,] < outliers[2,]
-ex1.test[65,] > outliers[1,] & ex1.test[65,] < outliers[2,]
-ex1.test[60:65,] > outliers[1,] & ex1.test[60:65,] < outliers[2,]
-ex1.test[10:65,] > outliers[1,] & ex1.test[10:65,] < outliers[2,]
-ex1.test[1:65,] > outliers[1,] & ex1.test[1:65,] < outliers[2,]
-ex1.test[10:100,] > outliers[1,] & ex1.test[10:100,] < outliers[2,]
-ex1.test[9:100,] > outliers[1,] & ex1.test[9:100,] < outliers[2,]
-ex1.test[11:100,] > outliers[1,] & ex1.test[11:100,] < outliers[2,]
-ex1.test[8:100,] > outliers[1,] & ex1.test[8:100,] < outliers[2,]
-ex1.test[0:100,] > outliers[1,] & ex1.test[0:100,] < outliers[2,]
-ex1.test[10:100,] > outliers[1,] & ex1.test[10:100,] < outliers[2,]
-ex1.test[5:100,] > outliers[1,] & ex1.test[5:100,] < outliers[2,]
-ex1.test[2:100,] > outliers[1,] & ex1.test[2:100,] < outliers[2,]
-ex1.test[3:100,] > outliers[1,] & ex1.test[3:100,] < outliers[2,]
-ex1.test[14:100,] > outliers[1,] & ex1.test[14:100,] < outliers[2,]
-ex1.test[10:100,] > outliers[1,] & ex1.test[10:100,] < outliers[2,]
-ex1.test[,] > outliers[1,] & ex1.test[,] < outliers[2,]
-names(ex1.test[,] > outliers[1,] & ex1.test[,] < outliers[2,])
-class(ex1.test[,] > outliers[1,] & ex1.test[,] < outliers[2,])
-class(ex1.test[1:10,] > outliers[1,] & ex1.test[1:10,] < outliers[2,])
-ex1.test[1:10,] > outliers[1,] & ex1.test[1:10,] < outliers[2,]
-iris
-help(agreggate)
-help(aggregate)
-aggregate(iris)
-aggregate(iris, function(x) (x))
-aggregate(iris, FUN = function(x) (x))
-function(x) (x)
-aggregate(c(1,2,3,4))
-aggregate(iris, iris$Species, mean)
-aggregate(iris, by = iris$Species, FUN = mean)
-aggregate(iris, by = list(iris$Species), FUN = mean)
-iris[0,]
-iris[0,] == Factor
-iris[0] == Factor
-iris[0] == "Factor"
-class(iris$Species)
-iris[0] == factor
-iris[0,] == "factor"
-iris[0,] == factor
-iris$Species == factor
-class(iris$Species) == factor
-iris$Species
-class(iris$Species)
-class(iris$Species) == numeric
-class(iris$Species) == "numeric"
-class(iris$Species) == "factor"
-colnames(iris$Species)
-names(iris[0,])
-class(names(iris[0,]))
-class(iris[0,] == "factor")
-class(iris[0,]) == "factor"
-class(iris[,]) == "factor"
-class(iris[,]) == "factor"
-class(iris[,0]) == "factor"
-class(iris["Species"]) == "factor"
+ex1.text < outlies
+ex1.test < outlies
+ex1.test < outliers
+ex1.test[names(ex1.test)] < outliers[names(ex1.test)]
+colnames(outliers)
+ex1.test[names(ex1.test)] < outliers[colnames(ex1.test)]
+outlierCutoff(ex1.test)
+source("hw4.r")
+outlierCutoff(ex1.test)
+source("hw4.r")
+outlierCutoff(ex1.test)
+quantile(1:5)
+unname(quantile(1:5))
+by(iris$Petal.Length, iris$Species, mean)
+head(iris)
+sapply(iris[, c("Petal.Length", "Petal.Width")], function(col) {by(col, iris$Species, mean)})
+iris[,lapply(data, isfactor)]
+iris[,lapply(iris, isfactor)]
+iris[,lapply(iris, is.factor)]
+iris[,sapply(iris, is.factor)]
+sapply(iris[,!(sapply(iris, is.factor))] , function(col) {by(col, iris[,sapply(iris, is.factor)], mean)})
+by(iris[,!(sapply(iris, is.factor))],iris[,sapply(iris, is.factor)], mean )
+by(iris[,!(sapply(iris, is.factor))][0],iris[,sapply(iris, is.factor)], mean )
+by(iris[,!(sapply(iris, is.factor))][1],iris[,sapply(iris, is.factor)], mean )
+iris[,!(sapply(iris, is.factor))][1]
+x = iris[,!(sapply(iris, is.factor))][1]
+x
+by(x,iris[,sapply(iris, is.factor)], mean )
+iris[,sapply(iris, is.factor)]
+by(x,1:150, function(c) (c))
+class(iris[,sapply(iris, is.factor)])
+iris[1:50]
+iris[1:150]
 iris["Species"]
 class(iris["Species"])
-iris$names(iris)
-iris$(names(iris))
-names(iris)
-iris$as.factor(names(iris))
-s.factor(names(iris)
-kjh
-table(iris)
-lapply(iris, class)
-lapply(iris, class)[0]
-x = lapply(iris, class)
-x[0]
-x[1]
-x[2]
-x[3]
-x[3,0]
-x[3][0]
-x[3][1]
-x[3][2]
-x[0][0]
-x[1][0]
-x[2][0]
-x[2][1]
-x[2][2]
-lapply(iris, class) == "factor"
-iris[,lapply(iris, class) == "factor"]
-table(iris[,lapply(iris, class) == "factor"])
-uniquw(iris[,lapply(iris, class) == "factor"])
-unique(iris[,lapply(iris, class) == "factor"])
-lapply(iris[,lapply(iris, class) == "factor"], unique)
-unique(iris[,lapply(iris, class) == "factor"])
-lapply(iris, mean)
-iris[,lapply(iris, class) == "factor"]
-iris[,lapply(iris, class)]
-lapply(iris, class)
-lapply(iris, class) == "factor"
-iris[lapply(iris, class) != "factor",]
-iris
-lapply(iris, class)
-iris[names(iris)] == "factor"
-iris[,!(names(iris) %in% "Species")]
-names(species) %in% "Species"
-names(iris) %in% "Species"
-apply(iris, 1, class)
-apply(iris, 2, class)
-apply(iris, 1, class)
-iris
-class(iris)
-iris[,names(iris)]
-lapply(iris, class)
-lapply(names(iris), class)
-iris[,lapply(iris, class) == "factor"]
-iris[,lapply(iris, class) != "factor"]
-class(iris[,lapply(iris, class) != "factor"])
-class(iris[lapply(iris, class) != "factor",])
-iris[lapply(iris, class) != "factor",]
-class(iris[,lapply(iris, class) != "factor"])
-iris = iris[,lapply(iris, class) != "factor"]
-iris
-iris
-load(iris)
-load("iris")
-names(iris)
+class(iris$Species)
+source("hw4.r")
+ex1.test > outlier.cutoff.t[,1] & ex1.test < outlier.cutoff[,2]
+ex1.test > outlier.cutoff.t[,1] & ex1.test < outlier.cutoff.t[,2]
+head(ex1.test > outlier.cutoff.t[,1] & ex1.test < outlier.cutoff.t[,2])
+outlier.cutoff.t[,1]
+outlier.cutoff.t[1,]
+head(ex1.test > outlier.cutoff.t[1,] & ex1.test < outlier.cutoff.t[2,])
+ex1.test > outlier.cutoff.t[1,] & ex1.test < outlier.cutoff.t[2,]
+apply(ex1.test, 1, function(x)(x > outlier.cutoff.t[1,] & x< outlier.cutoff.t[2,]))
+apply(ex1.test, 1, function(x)(as.numeric(x > outlier.cutoff.t[1,] & x< outlier.cutoff.t[2,])))
+apply(ex1.test, 1, function(x)(sum(as.numeric(x > outlier.cutoff.t[1,] & x< outlier.cutoff.t[2,]))))
+apply(ex1.test, 1, function(x)(sum(as.numeric(x > outlier.cutoff.t[1,] & x< outlier.cutoff.t[2,]))/ncol(ex1.test)))
+apply(ex1.test, 1, function(x)(sum(as.numeric(!(x > outlier.cutoff.t[1,] & x< outlier.cutoff.t[2,])))/ncol(ex1.test)))
+apply(ex1.test, 1, function(x)(sum(as.numeric(!(x > outlier.cutoff.t[1,] & x< outlier.cutoff.t[2,])))/ncol(ex1.test) > 0.25))
+apply(ex1.test, 1, function(x)(sum(as.numeric(!(x > outlier.cutoff.t[1,] & x< outlier.cutoff.t[2,])))/ncol(ex1.test) < 0.25))
+ex1.test[,apply(ex1.test, 1, function(x)(sum(as.numeric(!(x > outlier.cutoff.t[1,] & x< outlier.cutoff.t[2,])))/ncol(ex1.test) < 0.25))]
+ex1.test[apply(ex1.test, 1, function(x)(sum(as.numeric(!(x > outlier.cutoff.t[1,] & x< outlier.cutoff.t[2,])))/ncol(ex1.test) < 0.25)),]
+length(ex1.test[apply(ex1.test, 1, function(x)(sum(as.numeric(!(x > outlier.cutoff.t[1,] & x< outlier.cutoff.t[2,])))/ncol(ex1.test) < 0.25)),])
+nrow(ex1.test[apply(ex1.test, 1, function(x)(sum(as.numeric(!(x > outlier.cutoff.t[1,] & x< outlier.cutoff.t[2,])))/ncol(ex1.test) < 0.25)),])
+source("hw4.r")
+source("hw4.r")
+stdLevelDiff(iris)
+std.level.diff.t
+source("hw4.r")
+class(stdLevelDiff(iris))
+source("hw4.r")
+source("hw4.r")
+source("hw4.r")
+source("hw4.r")
+source("hw4.r")
+source("hw4.r")
+source("hw4.r")
+source("hw4.r")
+source("hw4.r")
+?rnorm
+?list
+?rnorm
+source("hw4.r")
+source("hw4.r")
+source("hw4.r")
+source("hw4.r")
+source("hw4.r")
+source("hw4.r")
+source("hw4.r")
+source("hw4.r")
+source("hw4.r")
