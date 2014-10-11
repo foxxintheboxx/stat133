@@ -4,14 +4,13 @@ load('ex1-data.rda')
 # 100. Each vector should contain draws from a normal distributions with means
 # given by <mean.vec> and sd=1.
 
-#normal.sims <- your code here
-
+normal.sims <- lapply(mean.vec, function(mu) rnorm(100, mu, 1))
 
 # 2) Calculate the 90th percentile for each column of <data.matrix>. Do the same
 # for each row.
 
-#col.90 <- your code here
-#row.90 <- your code here
+col.90 <- apply(data.matrix, 2, function(col) quantile(col, 0.9))
+row.90 <- apply(data.matrix, 2, function(row) quantile(row, 0.9))
 
 
 # 3) Find the maximum and minimum values in each column of <data.matrix>. Store
@@ -19,20 +18,20 @@ load('ex1-data.rda')
 # rows and the same number of columns as <data.matrix>. Do the same for each
 # column.
 
-#min.max.col <- your code here
-#min.max.row <- your code here
+min.max.col <- apply(data.matrix, 2, range)
+min.max.row <- apply(data.matrix, 1, range)
 
 
 # 4) Consider the dataset <iris> that comes built into R. Calculate the average
 # petal length by species.
 
-# avg.petal.lengths
+avg.petal.lengths = sapply(levels(iris$Species), functions(s) mean(iris$Petal.Length[iris$Species == s]))
 
 # 5) Create the variable <new.data.matrix>. This variable should be the same as
 # <data.matrix> but have the maximum and minimum observations in each  column
 # removed. Note: <new.data.matrix> should be a 98 x 10 matrix.
 
-#new.data.matrix <- your code here
+new.data.matrix <- apply(data.matrix, 2, function(col) col[-c(which.min(col), which.max(col))])
 
 
 # 6) Implement the function toFarenheit. Your function should take the following
@@ -47,6 +46,8 @@ load('ex1-data.rda')
 
 toFarenheit <- function(temp.celcius) {
     # your code here
+
+    (9/5)temp.celcius + 32  
 
 }
 

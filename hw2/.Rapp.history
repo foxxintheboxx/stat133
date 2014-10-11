@@ -1,0 +1,10 @@
+load("/Users/ianfox/Downloads/SFHousing.rda")
+setwd("User/ianfox/desktop/stat133/hw3")
+setwd("Users/ianfox/desktop/stat133/hw3")
+setwd("~/desktop/stat133/hw3")
+source("hw3.r")
+setwd("../hw2")
+setwd("hw2.r")
+ls
+getwd()
+source("hw2.r")
