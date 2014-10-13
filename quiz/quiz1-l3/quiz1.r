@@ -27,7 +27,7 @@ female.prop <- SO2012Ctry$Female / (SO2012Ctry$Male + SO2012Ctry$Female)
 # 2) Countries with more than or exactly 3 bronze medals: <subset.threebronze>
 
 subset.nobronze <- SO2012Ctry[SO2012Ctry$Bronze == 0,]
-subset.threebronze <- SO2012Ctry[SO2012Ctry$Bronze == 3,]
+subset.threebronze <- SO2012Ctry[SO2012Ctry$Bronze >= 3,]
 
 
 
