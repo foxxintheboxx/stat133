@@ -33,6 +33,26 @@
                 "hw2": {
                     "possible": 15, 
                     "earned": 15
+<<<<<<< HEAD
+                }
+            }
+        }, 
+        "hw3": {
+            "note": "", 
+            "hash": "e66229582e4891ad60540faa6ffa03d561abafbb", 
+            "earned": 26, 
+            "possible": 32, 
+            "penalty": 0, 
+            "parts": {
+                "hw3": {
+                    "possible": 16, 
+                    "earned": 11
+                }, 
+                "hw3_fig": {
+                    "possible": 16, 
+                    "earned": 15
+=======
+>>>>>>> 61fea4dee764d1defdb8d52fab80e45cefa81f63
                 }
             }
         }, 
