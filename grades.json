@@ -33,7 +33,7 @@
                 "hw2": {
                     "possible": 15, 
                     "earned": 15
-<<<<<<< HEAD
+
                 }
             }
         }, 
@@ -51,8 +51,6 @@
                 "hw3_fig": {
                     "possible": 16, 
                     "earned": 15
-=======
->>>>>>> 61fea4dee764d1defdb8d52fab80e45cefa81f63
                 }
             }
         }, 

@@ -1,4 +1,29 @@
 load("/Users/ianfox/Downloads/SFHousing.rda")
-setwd("~/desktop/stat133/hw4")
-setwd("../hw3")
-source("hw3.r")
+setwd("desktop/stat133")
+setwd("hw3")
+load("WR1500MeterMen.rda")
+objects()
+names(wr1500m)
+wr1500m[,"athlete"]
+abline?
+dskljf
+?abline
+?with
+?symbols
+load("SummerOlympics2012Ctry.rda")
+SO2012Ctry[SO2012Ctry$Total > 0, ]
+SO2012Ctry[,SO2012Ctry$Total > 0]
+with(SO2012Ctry[SO2012Ctry$Total > 0, ], #
+     symbols(log(pop), log(GDP_per_person), #
+              circles= sqrt(Total)/40, inches = FALSE))
+?table
+table(athletes$Sex, athletes$Sport)
+load("London2012ALL_ATHLETES.rda")
+table(athletes$Sex, athletes$Sport)
+head(athletes)
+table(athletes$Sport, athletes$Sex)
+barplot(table(athletes$Sex, athletes$Sport))
+barplot(table(athletes$Sex, athletes$Sport))
+barplot(table(athletes$Sex, athletes$Sport))
+?barplot
+order(table(athletes$Sport))
