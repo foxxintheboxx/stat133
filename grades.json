@@ -33,41 +33,23 @@
                 "hw2": {
                     "possible": 15, 
                     "earned": 15
-
                 }
             }
         }, 
         "hw3": {
             "note": "", 
-            "hash": "e66229582e4891ad60540faa6ffa03d561abafbb", 
-            "earned": 26, 
+            "hash": "dd113e49ff1dcd07a1c3c247dfde384aac3cf88b", 
+            "earned": 32, 
             "possible": 32, 
             "penalty": 0, 
             "parts": {
                 "hw3": {
-                    "possible": 16, 
-                    "earned": 11
+                    "possible": 0, 
+                    "earned": 0
                 }, 
                 "hw3_fig": {
-                    "possible": 16, 
-                    "earned": 15
-                }
-            }
-        }, 
-        "hw3": {
-            "note": "", 
-            "hash": "e66229582e4891ad60540faa6ffa03d561abafbb", 
-            "earned": 26, 
-            "possible": 32, 
-            "penalty": 0, 
-            "parts": {
-                "hw3": {
-                    "possible": 16, 
-                    "earned": 11
-                }, 
-                "hw3_fig": {
-                    "possible": 16, 
-                    "earned": 15
+                    "possible": 32, 
+                    "earned": 32
                 }
             }
         }, 
