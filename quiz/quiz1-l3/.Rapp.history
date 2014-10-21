@@ -1,0 +1,51 @@
+load("/Users/ianfox/Downloads/SFHousing.rda")
+setwd("desktop/stat133")
+setwd("quiz")
+setwd("quiz1-I3")
+setwd("quiz1-l3")
+load("/Users/ianfox/Desktop/stat133/quiz/quiz1-l3/SummerOlympics2012Ctry.rda")
+objects()
+head(SO2012Ctry)
+source("quiz1.r")
+objects()
+mean.GDP
+SO2012Ctry[S]
+female.prop <- SO2012Ctry$Female / (SO2012Ctry$Male + SO2012Ctry$Female)
+head(female.prop)
+1/5
+1/6
+2/6
+2/30
+source("quiz1.r")
+subset.nobronze
+subset.threebronze
+source("quiz1.r")
+subset.nobronze.pop
+length(subset.nobronze.pop)
+length(subset.nobronze)
+nrows(subset.nobronze)
+nrow(subset.nobronze)
+which(SO2012$GDPPP < 80000)
+SO2012$GDPPP < 80000
+which(SO2012Ctry$GDPPP < 80000)
+which(SO2012Ctry[SO2012Ctry$GDPPP < 80000,])
+SO2012Ctry$GDPPP < 80000
+length(SO2012Ctry$GDPPP < 80000)
+length(which(SO2012Ctry$GDPPP < 80000))
+source("quiz1.r")
+medpopByGDPPP(80000, SO2012Ctry$GDPPP, SO2012Ctry$pop)
+>plot
+?plot
+source("quiz1.r")
+source("quiz1.r")
+source("quiz1.r")
+source("quiz1.r")
+source("quiz1.r")
+source("quiz1.r")
+source("quiz1.r")
+medpopByGDPPP(90000, SO2012Ctry$GDPPP, SO2012Ctry$pop)
+source("quiz1.r")
+source("quiz1.r")
+source("quiz1.r")
+source("quiz1.r")
+source("quiz1.r")
