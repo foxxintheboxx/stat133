@@ -1,0 +1,201 @@
+load("/Users/ianfox/Downloads/SFHousing.rda")
+x = c(1,1,1)
+x[-1]
+x[-3]
+x[1]
+x[2]
+x[3
+]
+x[c(c2,3)]
+x[c(2,3)]
+x[-1]
+x = c(1,2,3)
+x[-1]
+x[not 1]
+x[!1]
+x[!]
+x[!1]
+x[!2]
+x = c(1,2,"f")
+x[!3]
+x[-3]
+x[!2]
+x = c(1,2,f)
+x = c(1,2,3)
+x[-3]
+flips = c(1,1,1,1,1, 0,1,0,1)
+sep = which(c(0,flips,0) == 0)
+sep
+sep = which(c(0,flips,0) == 0)
+sep[-1] - se[-length(sep)] -1
+sep[-1] - sep[-length(sep)] -1
+sep[-1]
+sep[-length(sep)]
+git pull
+setwd("~/desktop/stat1333")
+setwd("~/desktop/stat133")
+x <- seq(2, 20, 2)
+x
+y <- seq(1, 19, 2) * -1
+y
+z <- rep.int(c(1,2,3,4,5), 4)
+z
+z <- sort(rep.int(c(1,2,3,4,5), 4))
+z
+apply(1:12,1, function(x) {x * 10})
+sapply?
+jj
+?sapply
+sapply(1:12, function(x) {x * 10})
+class(sapply(1:12, function(x) {x * 10}))
+matrix(vec,nrow = 7,ncol = 7)
+matrix(1:12,nrow = 3,ncol = 4)
+matrix(1:12 * 10,nrow = 3,ncol = 4)
+matrix(1:12 * 10,nrow = 3,ncol = 4, byrow=TRUE)
+a:j
+"a":"j"
+letters("a")
+letters(seq(1:10))
+letters?
+fk
+?letters
+letters
+letters[0:10]
+data.frame
+data.frame(c(1:10))
+data.frame(c(1:10), c("num"))
+data.frame(1:10, letters[1:10], 1:10 % 2 == 0)
+1%2
+1 % 2
+data.frame(1:10, letters[1:10], 1:10 %% 2 == 0)
+data.frame(num = 1:10, lett = letters[1:10], even = 1:10 %% 2 == 0)
+?list
+setwd("midterm")
+source("midterm.r")
+source("midterm.r")
+p
+?rbinom
+nmat <- matrix(rnorm(100*100, 6, 2))
+nmat
+nmat <- matrix(rnorm(100*100, 6, 2), nrow= 100, ncol = 100)
+nmat
+rnorm(100* 100, 6, 2)
+nmat <- matrix(rnorm(100*100, 6, 2), nrow= 100, ncol = 100)
+length(nmat)
+nrow(nmat)
+ncol(nmat)
+head(nmat)
+nmat <- matrix(rnorm(100*100, 6, 2), ncol = 100)
+nmat
+set.seed(42)
+nmat <- matrix(rnorm(100*100, 6, 2), ncol = 100)
+nmat
+nmat
+nmat
+head(nmat)
+nmat <- matrix(rnorm(100*100, 6, 2), nrow = 100, ncol = 100)
+head(nmat)
+nmat <- matrix(rnorm(5*5, 6, 2), nrow= 5, ncol = 5)
+nmat
+nmat <- matrix(rnorm(5*5, 6, 2), nrow= 5, ncol = 5)
+nmat
+setseed(42)
+set.seed(42)
+nmat <- matrix(rnorm(5*5, 6, 2), nrow= 5, ncol = 5)
+nmat
+set.seed(42)
+nmat <- matrix(rnorm(5*5, 6, 2), nrow= 5, ncol = 5)
+nmat
+load("rainfallCO.rda")
+objects()
+rain
+class(rain)
+objects()
+head(day)
+names(rain)
+rain["st050183"]
+names(rain)
+sapply(rain[names(rain)], function(x) { length(x) })
+lapply(rain[names(rain)], function(x) { length(x) })
+max.rain <- sapply(rain[names(rain)], function(x) { max(x) })
+max.rain
+standardize <- function(x){#
+#
+	mean <- mean(x)#
+	sd <- sd(x)#
+	sapply(x, function(el) {(x - mean)/sd})#
+#
+}
+standard(1:10)
+standardize(1:10)
+mean(1:10)
+sd(1:10)
+?boxplot
+?plot
+boxplot(rain)
+boxplot(rain[names(rain)[1]])
+boxplot(rain, range = 0)
+boxplot(rain, range = 1)
+boxplot(rain, range = 0:(max(rain)))
+boxplot(rain, range = 0:(max(rain[names(rain)])))
+boxplot(rain, range = 0:200)
+boxplot(rain, range =200)
+names(day)
+?plot
+plot(x=day[names(day)[1]], y = rain[names(rain)[1]])
+plot(x=day[names(day)[1]], y = c(rain[names(rain)[1]]))
+class(rain[names(rain)[1]])
+class(rain[names(rain)[1]][1])
+x = rain[names(rain)[1]]
+x
+x[1]
+x[1, 1]
+plot(x=day[names(day)[1]], y = c(rain[names(rain)[1]]))
+plot(x=c(day[names(day)[1]]), y = c(rain[names(rain)[1]]))
+c(do.call("cbind",rain[names(rain)[1]]))
+x = c(do.call("cbind",day[names(day)[1]])),y = c(do.call("cbind",rain[names(rain)[1]])))
+plot(x = c(do.call("cbind",day[names(day)[1]])),y = c(do.call("cbind",rain[names(rain)[1]])))
+names(day)
+day[names(day)[1]])
+day[names(day)[1]]
+day[names(day)[1]] >= 2000
+plot(x = c(do.call("cbind",day[names(day)[1]])),y = c(do.call("cbind",rain[names(rain)[1]])))day[names(day)[1]])
+c(do.call("cbind",day[names(day)[1]])) >= 2000
+c(do.call("cbind",day[names(day)[1]]))[c(do.call("cbind",day[names(day)[1]])) >= 2000]
+plot(x =  c(do.call("cbind",day[names(day)[1]]))[c(do.call("cbind",day[names(day)[1]])) >= 2000],y = c(do.call("cbind",rain[names(rain)[1]])))day[names(day)[1]])
+c(do.call("cbind",day[names(day)[1]]))[c(do.call("cbind",day[names(day)[1]])) >= 2000]
+x =  c(do.call("cbind",day[names(day)[1]]))[c(do.call("cbind",day[names(day)[1]])) >= 2000]
+plot(x =  x ,y = c(do.call("cbind",rain[names(rain)[1]])))day[names(day)[1]])
+g =  c(do.call("cbind",day[names(day)[1]]))[c(do.call("cbind",day[names(day)[1]])) >= 2000]
+plot(x =  g ,y = c(do.call("cbind",rain[names(rain)[1]])))day[names(day)[1]])
+plot(x =  g ,y = c(do.call("cbind",rain[names(rain)[1]])))[names(day)[1]])
+plot(x =  g ,y = c(do.call("cbind",rain[names(rain)[1]])))
+plot(x =  g ,y = c(do.call("cbind",rain[names(rain)[1]]))[c(do.call("cbind",day[names(day)[1]])) >= 2000])
+s.date = c(do.call("cbind",day[names(day)[1]]))#
+s.precip = c(do.call("cbind",rain[names(rain)[1]]))#
+#
+plot(x = s.date[c(do.call("cbind",day[names(day)[1]])) >= 2000], y = s.precip[c(do.call("cbind",day[names(day)[1]])) >= 2000], xlab = "day", ylab = "precip")
+load("KaiserBabies.rda")
+fit <- lm(bwt ~ gestation, data=infants)
+head(fit)
+names(fit)
+objects()
+bwt
+load("KaiserBabies.rda")
+bwt
+load("KaiserBabies.rda")
+objects()
+infants
+names(infants)
+hist(dwt)
+hist(infants$dwt)
+table(ed)
+table(infants$ed)
+head(infants)
+table(infants$ed, infants$ded)
+source("midterm.r")
+names(fit)
+source("midterm.r")
+plot(x = infants$gestation, y = infants$bwt, xlab = "gestation", ylab = "bwt")#
+abline(fit["coefficients"], col ="red")
+source("midterm.r")
