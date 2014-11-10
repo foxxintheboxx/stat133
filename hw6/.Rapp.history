@@ -1,0 +1,1589 @@
+booleans
+zeroes = which(x == 0)
+ones = indexes
+twos = which(x == 2)
+zeroes
+ones
+twos
+xor(ones, 1:11)
+xor(booleans, 1:11)
+1:11
+booleans & 1:11
+for i in 1:10 { print(i)}
+for i in 1:10 { print(i) }
+print(1)
+for i in 1:11 { print(i) }
+print(1)
+for i = 0 in 1:11 {print(i)}
+for (i in 1:11) { print(i) }
+x = c(1)
+x + c(2)
+x c(x,2)
+x <- c(x,2)
+x
+x = c()
+x
+x = c(x,1)
+x
+x = NULL
+x = c(x,1)
+x
+x = NULL
+if (x)
+{}
+x
+x == TRUE
+x == NULL
+!x
+x & 1
+x
+x = TRUE
+x == TRUE
+x = c()
+length(x)
+9 % 8
+9 mod 8
+9 %% 8
+9 %% 9
+for (i in 1:11) {print((i+1) %% 11)}
+for (i in 1:11) {print((i+1) %% 11), print (i)}
+for (i in 1:11) {print((i+1) %% 11) print (i)}
+for (i in 1:11) {print((i+1) %% 11)}
+for (i in 1:11) {print((i) %% 11)}
+for (i in 1:11) {print((i)}
+for (i in 1:11) {print(i)}
+for (i in 1:11) {print((i+1) %% 11+1)}
+for (i in 1:11) {print((i+1) %% 12)}
+1 += 1
+x = 1
+x +=1
+1 in c(1,2)
+1 %in% c(1,2)
+split <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- curr %% (length(vector) + 1)#
+		if (nex == 0) {#
+			1#
+		}#
+		if (length(sublist) > 0 && (vector[nex] == 0 || vector[nex] %in% all.indexes) ) {#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+#
+		} else if (vector == v) {#
+			sublist = c(sublist, vector[curr])#
+		} else if (vector != 0) {#
+			sublist = NULL#
+		}#
+	}#
+	return all.indexes#
+}
+split <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- curr %% (length(vector) + 1)#
+		if (nex == 0) {#
+			1#
+		}#
+		if (length(sublist) > 0 && (vector[nex] == 0 || vector[nex] %in% all.indexes) ) {#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+#
+		} else if (vector == v) {#
+			sublist = c(sublist, vector[curr])#
+		} else if (vector != 0) {#
+			sublist = NULL#
+		}}return all.indexes}
+split <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- curr %% (length(vector) + 1)#
+		if (nex == 0) {#
+			1#
+		}#
+		if (length(sublist) > 0 && (vector[nex] == 0 || vector[nex] %in% all.indexes) ) {#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+#
+		} else if (vector == v) {#
+			sublist = c(sublist, vector[curr])#
+		} else if (vector != 0) {#
+			sublist = NULL#
+		}
+}
+return all.indexes
+split <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- curr %% (length(vector) + 1)#
+		if (nex == 0) {#
+			1#
+		}#
+		if (length(sublist) > 0 && (vector[nex] == 0 || vector[nex] %in% all.indexes) ) {#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+#
+		} else if (vector == v) {#
+			sublist = c(sublist, vector[curr])#
+		} else if (vector != 0) {#
+			sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+split(c(0,1,1,0,1,2), 1)
+warnings()
+split <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- curr %% (length(vector) + 1)#
+		if (nex == 0) {#
+			1#
+		}#
+		if (length(sublist) > 0 && (vector[nex] == 0 || vector[nex] %in% all.indexes) ) {#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+#
+		} else if (vector[curr] == v) {#
+			sublist = c(sublist, vector[curr])#
+		} else if (vector[curr] != 0) {#
+			sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+split(c(0,1,1,1,0,1,2))
+split(c(0,1,1,1,0,1,2), 2)
+split(c(0,1,1,1,0,1,2), 1)
+split <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- curr %% (length(vector) + 1)#
+		if (nex == 0) {#
+			1#
+		}#
+		if (length(sublist) > 0 && (vector[nex] == 0 || vector[nex] %in% all.indexes) ) {#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+#
+		} else if (vector[curr] == v) {#
+			sublist = c(sublist, curr)#
+		} else if (vector[curr] != 0) {#
+			sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+split(c(0,1,1,1,0,1,2), 1)
+x = c(0,1,1,1,0,1,2)
+split(x, 1)
+x[3]
+x[5]
+split <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- curr %% (length(vector) + 1)#
+		if (nex == 0) {#
+			1#
+		}#
+		if (length(sublist) > 0 && (vector[nex] == 0 || vector[nex] %in% all.indexes) ) {#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+#
+		} else if (vector[curr] == v) {#
+			print(curr)#
+			sublist = c(sublist, curr)#
+		} else if (vector[curr] != 0) {#
+			sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+split(x, 1)
+x[7]
+split <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- curr %% (length(vector) + 1)#
+		if (nex == 0) {#
+			1#
+		}#
+		if (length(sublist) > 0 && #
+			(vector[nex] == 0 || vector[nex] %in% all.indexes) &&#
+			vector[curr] == v) {#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+#
+		} else if (vector[curr] == v) {#
+			print(curr)#
+			sublist = c(sublist, curr)#
+		} else if (vector[curr] != 0) {#
+			sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+split(x, 1)
+split <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- curr %% (length(vector) + 1)#
+		if (nex == 0) {#
+			1#
+		}#
+		if (length(sublist) > 0 && #
+			(vector[nex] == 0 || vector[nex] %in% all.indexes) &&#
+			vector[curr] == v) {#
+			all.indexes = c(all.indexes, sublist, curr)#
+		} else if (vector[curr] == v) {#
+			print(curr)#
+			sublist = c(sublist, curr)#
+		} else if (vector[curr] != 0) {#
+			sublist = NULL#
+		}#
+	}#
+	print(all.indexes)#
+}
+split(x, 1)
+split <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- curr %% (length(vector) + 1)#
+		if (nex == 0) {#
+			1#
+		}#
+		if (length(sublist) > 0 && #
+			(vector[nex] == 0 || vector[nex] %in% all.indexes) &&#
+			vector[curr] == v) {#
+			all.indexes = c(all.indexes, sublist, curr)#
+			print(all.indexes)#
+		} else if (vector[curr] == v) {#
+			sublist = c(sublist, curr)#
+		} else if (vector[curr] != 0) {#
+			sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+split(x, 1)
+v = c(NULL, NULL, c(1,2))
+v
+split <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- curr %% (length(vector) + 1)#
+		if (nex == 0) {#
+			1#
+		}#
+		if (length(sublist) > 0 && #
+			(vector[nex] == 0 || vector[nex] %in% all.indexes) &&#
+			vector[curr] == v) {#
+			print(sublist)#
+			all.indexes = c(all.indexes, sublist, curr)#
+		} else if (vector[curr] == v) {#
+			sublist = c(sublist, curr)#
+		} else if (vector[curr] != 0) {#
+			sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+split(x, 1)
+split <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- curr %% (length(vector) + 1)#
+		if (nex == 0) {#
+			1#
+		}#
+		if (length(sublist) > 0 && #
+			(vector[nex] == 0 || vector[nex] %in% all.indexes) &&#
+			vector[curr] == v) {#
+			print(sublist)#
+			all.indexes = c(all.indexes, sublist, curr)#
+		} else if (vector[curr] == v) {#
+			sublist = c(sublist, curr)#
+		} else if (vector[curr] != 0) {#
+			sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+split(x, 1)
+split <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- curr %% (length(vector) + 1)#
+		if (nex == 0) {#
+			1#
+		}#
+		print(sublist)#
+		print(vector[curr])#
+		if (length(sublist) > 0 && #
+			(vector[nex] == 0 || vector[nex] %in% all.indexes) &&#
+			vector[curr] == v) {#
+			all.indexes = c(all.indexes, sublist, curr)#
+		} else if (vector[curr] == v) {#
+			sublist = c(sublist, curr)#
+		} else if (vector[curr] != 0) {#
+			sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+split(x,1)
+split <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- curr %% (length(vector) + 1)#
+		if (nex == 0) {#
+			1#
+		}#
+		print(sublist)#
+		print(curr)#
+		if (length(sublist) > 0 && #
+			(vector[nex] == 0 || vector[nex] %in% all.indexes) &&#
+			vector[curr] == v) {#
+			all.indexes = c(all.indexes, sublist, curr)#
+		} else if (vector[curr] == v) {#
+			sublist = c(sublist, curr)#
+		} else if (vector[curr] != 0) {#
+			sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+split(x,1)
+x
+split <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- curr %% (length(vector) + 1)#
+		if (nex == 0) {#
+			1#
+		}#
+		print("sublist")#
+		print(sublist)#
+		print("curr")#
+		print(curr)#
+		print("nex")#
+		print(nex)#
+		if (length(sublist) > 0 && #
+			(vector[nex] == 0 || vector[nex] %in% all.indexes) &&#
+			vector[curr] == v) {#
+			all.indexes = c(all.indexes, sublist, curr)#
+		} else if (vector[curr] == v) {#
+			sublist = c(sublist, curr)#
+		} else if (vector[curr] != 0) {#
+			sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+split(x, 1)
+split <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- curr %% (length(vector) + 1)#
+		if (nex == 0) {#
+			1#
+		}#
+		print("sublist")#
+		print(sublist)#
+		print("curr")#
+		print(curr)#
+		print("nex")#
+		print(nex)#
+		if ((vector[nex] == 0 || vector[nex] %in% all.indexes) &&#
+			vector[curr] == v) {#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+		} else if (vector[curr] == v) {#
+			sublist = c(sublist, curr)#
+		} else if (vector[curr] != 0) {#
+			sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+split(x,1)
+split <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- curr %% (length(vector) + 1)#
+		if (nex == 0) {#
+			1#
+		}#
+#
+		print(sublist)#
+#
+		print(vector[curr] == v)#
+		print("nex")#
+		print((vector[nex] == 0)#
+		if ((vector[nex] == 0 || vector[nex] %in% all.indexes) &&#
+			vector[curr] == v) {#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+		} else if (vector[curr] == v) {#
+			sublist = c(sublist, curr)#
+		} else if (vector[curr] != 0) {#
+			sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+split <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- curr %% (length(vector) + 1)#
+		if (nex == 0) {#
+			1#
+		}#
+#
+		print(sublist)#
+		print(vector[curr] == v)#
+		print("nex")#
+		print(vector[nex] == 0)#
+		if ((vector[nex] == 0 || vector[nex] %in% all.indexes) &&#
+			vector[curr] == v) {#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+		} else if (vector[curr] == v) {#
+			sublist = c(sublist, curr)#
+		} else if (vector[curr] != 0) {#
+			sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+split(x, 1)
+split <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- curr %% (length(vector) + 1)#
+		if (nex == 0) {#
+			1#
+		}#
+		print("curr")#
+#
+		print(vector[curr] == v)#
+		print("nex")#
+		print(nex)#
+		print(vector[nex] == 0)#
+		print()#
+		if ((vector[nex] == 0 || vector[nex] %in% all.indexes) &&#
+			vector[curr] == v) {#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+		# } else if (vector[curr] == v) {#
+		# 	sublist = c(sublist, curr)#
+		# } else if (vector[curr] != 0) {#
+		# 	sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+split(x, 1)
+split <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- curr %% (length(vector) + 1)#
+		if (nex == 0) {#
+			1#
+		}#
+		print("curr")#
+#
+		print(vector[curr] == v)#
+		print("nex")#
+		print(nex)#
+		print(vector[nex] == 0)#
+		print("\n")#
+		if ((vector[nex] == 0 || vector[nex] %in% all.indexes) &&#
+			vector[curr] == v) {#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+		# } else if (vector[curr] == v) {#
+		# 	sublist = c(sublist, curr)#
+		# } else if (vector[curr] != 0) {#
+		# 	sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+split(x, 1)
+split <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- curr %% (length(vector) + 1)#
+		if (nex == 0) {#
+			1#
+		}#
+		print("curr")#
+#
+		print(vector[curr] == v)#
+		print("nex")#
+		print(nex)#
+		print(vector[nex] == 0)#
+		print("\n")#
+		if ((vector[nex] == 0 || nex %in% all.indexes) &&#
+			vector[curr] == v) {#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+			print("wtf")#
+		# } else if (vector[curr] == v) {#
+		# 	sublist = c(sublist, curr)#
+		# } else if (vector[curr] != 0) {#
+		# 	sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+y = c(0,1,0,1,0)
+split(y, 1)
+split <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- curr %% (length(vector) + 1)#
+		if (nex == 0) {#
+			1#
+		}#
+		if ((vector[nex] == 0 || nex %in% all.indexes) &&#
+			vector[curr] == v) {#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+			print("wtf")#
+		# } else if (vector[curr] == v) {#
+		# 	sublist = c(sublist, curr)#
+		# } else if (vector[curr] != 0) {#
+		# 	sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+split(y, 1)
+split <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- curr %% (length(vector) + 1)#
+		if (nex == 0) {#
+			1#
+		}#
+		print((vector[nex] == 0 || nex %in% all.indexes) &&#
+			vector[curr] == v))#
+		if ((vector[nex] == 0 || nex %in% all.indexes) &&#
+			vector[curr] == v) {#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+			print("wtf")#
+		# } else if (vector[curr] == v) {#
+		# 	sublist = c(sublist, curr)#
+		# } else if (vector[curr] != 0) {#
+		# 	sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+split <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- curr %% (length(vector) + 1)#
+		if (nex == 0) {#
+			1#
+		}#
+		print(vector[nex] == 0 || nex %in% all.indexes) &&#
+			vector[curr] == v)#
+		if ((vector[nex] == 0 || nex %in% all.indexes) &&#
+			vector[curr] == v) {#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+			print("wtf")#
+		# } else if (vector[curr] == v) {#
+		# 	sublist = c(sublist, curr)#
+		# } else if (vector[curr] != 0) {#
+		# 	sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+split <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- curr %% (length(vector) + 1)#
+		if (nex == 0) {#
+			1#
+		}#
+		print(vector[nex] == 0 || nex %in% all.indexes) &&#
+			vector[curr] == v)#
+		if (vector[nex] == 0 &&#
+			vector[curr] == v) {#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+			print("wtf")#
+		# } else if (vector[curr] == v) {#
+		# 	sublist = c(sublist, curr)#
+		# } else if (vector[curr] != 0) {#
+		# 	sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+split <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- curr %% (length(vector) + 1)#
+		if (nex == 0) {#
+			1#
+		}#
+#
+		if (vector[nex] == 0 &&#
+			vector[curr] == v) {#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+			print("wtf")#
+		# } else if (vector[curr] == v) {#
+		# 	sublist = c(sublist, curr)#
+		# } else if (vector[curr] != 0) {#
+		# 	sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+split(y, 1)
+split <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- curr %% (length(vector) + 1)#
+		if (nex == 0) {#
+			1#
+		}#
+		print(vector[nex])#
+		print(vector[curr])#
+		if (vector[nex] == 0 &&#
+			vector[curr] == v) {#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+			print("wtf")#
+		# } else if (vector[curr] == v) {#
+		# 	sublist = c(sublist, curr)#
+		# } else if (vector[curr] != 0) {#
+		# 	sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+split(y, 1)
+split <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- curr %% (length(vector) + 1)#
+		if (nex == 0) {#
+			1#
+		}#
+		print("nex")#
+		print(nex)#
+		print(vector[nex])#
+		print("curr")#
+		print(curr)#
+		print(vector[curr])#
+		if (vector[nex] == 0 &&#
+			vector[curr] == v) {#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+			print("wtf")#
+		# } else if (vector[curr] == v) {#
+		# 	sublist = c(sublist, curr)#
+		# } else if (vector[curr] != 0) {#
+		# 	sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+split(y, 1)
+split <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- (curr + 1)%% (length(vector) + 1)#
+		if (nex == 0) {#
+			1#
+		}#
+		if ((vector[nex] == 0 || vector[nex] %in% all.indexes) &&#
+			vector[curr] == v) {#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+		} else if (vector[curr] == v) {#
+			sublist = c(sublist, curr)#
+		} else if (vector[curr] != 0) {#
+			sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+split(y, 1)
+y
+split(x, 1)
+x
+split <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- (curr + 1)%% (length(vector) + 1)#
+		if (nex == 0) {#
+			1#
+		}#
+		if ((vector[nex] == 0 || vector[nex] %in% all.indexes) &&#
+			vector[curr] == v) {#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+		} else if (vector[curr] == v) {#
+			sublist = c(sublist, curr)#
+		} else if (vector[curr] != 0) {#
+			print("here")#
+			sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+split(x, 1)
+split <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- (curr + 1)%% (length(vector) + 1)#
+		if (nex == 0) {#
+			1#
+		}#
+		if ((vector[nex] == 0 || vector[nex] %in% all.indexes) &&#
+			vector[curr] == v) {#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+		} else if (vector[curr] == v) {#
+			sublist = c(sublist, curr)#
+		} else if (vector[curr] != 0) {#
+			print(curr)#
+			sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+split(x, 1)
+split <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- (curr + 1)%% (length(vector) + 1)#
+		if (nex == 0) {#
+			1#
+		}#
+		if ((vector[nex] == 0 || vector[nex] %in% all.indexes) &&#
+			vector[curr] == v) {#
+			print(curr)#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+		} else if (vector[curr] == v) {#
+			sublist = c(sublist, curr)#
+		} else if (vector[curr] != 0) {#
+			print(curr)#
+			sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+split(x,1)
+split <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- (curr + 1)%% (length(vector) + 1)#
+		if (nex == 0) {#
+			1#
+		}#
+		if ((vector[nex] == 0 || nex %in% all.indexes) &&#
+			vector[curr] == v) {#
+			print(curr)#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+		} else if (vector[curr] == v) {#
+			sublist = c(sublist, curr)#
+		} else if (vector[curr] != 0) {#
+			print(curr)#
+			sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+split(x,1)
+x
+split(x,2)
+split <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- (curr + 1)%% (length(vector) + 1)#
+		if (nex == 0) {#
+			1#
+		}#
+		if ((vector[nex] == 0 || nex %in% all.indexes) && vector[curr] == v) {#
+			print(curr)#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+		} else if (vector[curr] == v) {#
+			sublist = c(sublist, curr)#
+		} else if (vector[curr] != 0) {#
+			print(curr)#
+			sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+split(x,2)
+split <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- (curr + 1)%% (length(vector) + 1)#
+		if (nex == 0) {#
+			nex = 1#
+		}#
+		if ((vector[nex] == 0 || nex %in% all.indexes) && vector[curr] == v) {#
+			print(curr)#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+		} else if (vector[curr] == v) {#
+			sublist = c(sublist, curr)#
+		} else if (vector[curr] != 0) {#
+			print(curr)#
+			sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+split(x, 2)
+split <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- (curr + 1)%% (length(vector) + 1)#
+		if (nex == 0) {#
+			nex = 1#
+		}#
+		if ((vector[nex] == 0 || nex %in% all.indexes) && vector[curr] == v) {#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+		} else if (vector[curr] == v) {#
+			sublist = c(sublist, curr)#
+		} else if (vector[curr] != 0) {#
+			sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+split(x, 2)
+bml.init = function(r,c,p){#
+  m = matrix(0,r,c)#
+for(i in 1:r){#
+  for(j in 1:c){#
+    x1 = runif(1,0,1)#
+    if(x1 < p) {#
+    m[i,j] = sample(c(1,2),1, replace=T)#
+    } #
+  }#
+}#
+return(m)#
+}
+bmi.init(10, 5, 0.5)
+bmi.init(10, 5, 0.1)
+bmi.init(10, 5, 0.5)
+bml.initl<- function(r, c, p) { #
+   m <- matrix(rbinom(r*c,c(1,2),p),nrow=r,ncol=c)#
+   return m#
+}
+bml.initl<- function(r, c, p) { #
+   m <- matrix(rbinom(r*c,c(1,2),p),nrow=r,ncol=c)#
+   m#
+}
+bml.initl(5,10, 0.1)
+bml.initl(5,10, 0.2)
+bml.initl(10,5, 0.2)
+bml.initl(10,5, 0.1)
+bml.init(10,5,0.1)
+runif(1,0,1)
+bml.initl(10,5, 0.1)
+bml.init(10,5, 0.1)
+2/50
+8/50
+bml.init(10,5, 0.1)
+bml.initl(10,5, 0.1)
+for (i in c(1,2,4,5){print(i)})
+for (i in c(1,2,4,5){print(i)}
+for (i in c(1,2,4,5)){print(i)}
+bml.step <- function(m){#
+#
+  #advance north the#
+  new.m = apply(m, 1, function(c){#
+  		indexes = indexes.to.advance(c,1)#
+  		for (i in 1:length(c)){#
+  			if (i %in% indexes)#
+  			{#
+  				new.i = i - 1#
+  				if (new.i == 0) {#
+  					new.i = length(c)#
+  				}#
+  				c[i - 1] = c[i]#
+  				c[i] = 0#
+  			}#
+  		}#
+  		c#
+  	})#
+  	new.m#
+   #return(list(m, grid.new))#
+}#
+#
+indexes.to.advance <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- (curr + 1)%% (length(vector) + 1)#
+		if (nex == 0) {#
+			nex = 1#
+		}#
+		if ((vector[nex] == 0 || nex %in% all.indexes) && vector[curr] == v) {#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+		} else if (vector[curr] == v) {#
+			sublist = c(sublist, curr)#
+		} else if (vector[curr] != 0) {#
+			sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+m = bml.init(10,5,.5)
+bml.step(m)
+m
+apply(m, 1, function(c) {print(c)})
+apply(m, 2, function(c) {print(c)})
+apply(m, 2, function(c) {c})
+m
+m == bml.initl<- function(r, c, p) { #
+   m <- matrix(rbinom(r*c,c(1,2),p),nrow=r,ncol=c)#
+   m#
+}dsg
+m == apply(m, 2, function(c) {c})
+bml.step <- function(m){#
+#
+  #advance north the#
+  new.m = apply(m, 2, function(c){#
+  		indexes = indexes.to.advance(c,1)#
+  		for (i in 1:length(c)){#
+  			if (i %in% indexes)#
+  			{#
+  				new.i = i - 1#
+  				if (new.i == 0) {#
+  					new.i = length(c)#
+  				}#
+  				c[i - 1] = c[i]#
+  				c[i] = 0#
+  			}#
+  		}#
+  		c#
+  	})#
+  	new.m#
+   #return(list(m, grid.new))#
+}
+bml.step(m)
+m
+bml.step <- function(m){#
+#
+  #advance north the#
+  new.m = apply(m, 2, function(c){#
+  		indexes = indexes.to.advance(c,1)#
+  		print(indexes)#
+  		for (i in 1:length(c)){#
+  			if (i %in% indexes)#
+  			{#
+  				new.i = i - 1#
+  				if (new.i == 0) {#
+  					new.i = length(c)#
+  				}#
+  				c[i - 1] = c[i]#
+  				c[i] = 0#
+  			}#
+  		}#
+  		c#
+  	})#
+  	new.m#
+   #return(list(m, grid.new))#
+}
+bml.step(m)
+m
+indexes.to.advance <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- (curr - 1)%% (length(vector) - 1)#
+		if (nex == 0) {#
+			nex = 1#
+		}#
+		if ((vector[nex] == 0 || nex %in% all.indexes) && vector[curr] == v) {#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+		} else if (vector[curr] == v) {#
+			sublist = c(sublist, curr)#
+		} else if (vector[curr] != 0) {#
+			sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+indexes.to.advance(c(0,2,1,0,1,0,0,2,0,0))
+indexes.to.advance(c(0,2,1,0,1,0,0,2,0,0),1)
+indexes.to.advance <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- (curr - 1)%% (length(vector) - 1)#
+		if (nex == 0) {#
+			nex = length(vector)#
+		}#
+		if ((vector[nex] == 0 || nex %in% all.indexes) && vector[curr] == v) {#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+		} else if (vector[curr] == v) {#
+			sublist = c(sublist, curr)#
+		} else if (vector[curr] != 0) {#
+			sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+indexes.to.advance(c(0,2,1,0,1,0,0,2,0,0),1)
+indexes.to.advance <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		nex <- (curr - 1)%% (length(vector))#
+		if (nex == 0) {#
+			nex = length(vector)#
+		}#
+		if ((vector[nex] == 0 || nex %in% all.indexes) && vector[curr] == v) {#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+		} else if (vector[curr] == v) {#
+			sublist = c(sublist, curr)#
+		} else if (vector[curr] != 0) {#
+			sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+indexes.to.advance(c(0,2,1,0,1,0,0,2,0,0),1)
+= c(0,2,1,0,1,0,0,2,0,0)
+x = c(0,2,1,0,1,0,0,2,0,0)
+x
+0 && 11
+0 %% 11
+indexes.to.advance <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		prev <- (curr - 1)%% (length(vector))#
+		if (prev == 0) {#
+			nex = length(vector)#
+		}#
+		print()#
+		if ((vector[prev] == 0 || prev %in% all.indexes) && vector[curr] == v) {#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+		} else if (vector[curr] == v) {#
+			sublist = c(sublist, curr)#
+		} else if (vector[curr] != 0) {#
+			sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+indexes.to.advance(x,1)
+x
+indexes.to.advance(x, 1)
+indexes.to.advance <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in 1:length(vector)) {#
+		prev <- (curr - 1)%% (length(vector))#
+		if (prev == 0) {#
+			nex = length(vector)#
+		}#
+		if ((vector[prev] == 0 || prev %in% all.indexes) && vector[curr] == v) {#
+			print("adding to superlist")#
+			print(curr)#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+		} else if (vector[curr] == v) {#
+			print("adding to sublist")#
+			print(curr)#
+			sublist = c(sublist, curr)#
+		} else if (vector[curr] != 0) {#
+			print("hit block")#
+			print(curr)#
+			sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+indexes.to.advance(x, 1)
+rev(1:10)
+indexes.to.advance <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in rev(1:length(vector)) {#
+		prev <- (curr - 1)%% (length(vector))#
+		if (prev == 0) {#
+			nex = length(vector)#
+		}#
+		if ((vector[prev] == 0 || prev %in% all.indexes) && vector[curr] == v) {#
+			print("adding to superlist")#
+			print(curr)#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+		} else if (vector[curr] == v) {#
+			print("adding to sublist")#
+			print(curr)#
+			sublist = c(sublist, curr)#
+		} else if (vector[curr] != 0) {#
+			print("hit block")#
+			print(curr)#
+			sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+indexes.to.advance <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in rev(1:length(vector))) {#
+		prev <- (curr - 1)%% (length(vector))#
+		if (prev == 0) {#
+			nex = length(vector)#
+		}#
+		if ((vector[prev] == 0 || prev %in% all.indexes) && vector[curr] == v) {#
+			print("adding to superlist")#
+			print(curr)#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+		} else if (vector[curr] == v) {#
+			print("adding to sublist")#
+			print(curr)#
+			sublist = c(sublist, curr)#
+		} else if (vector[curr] != 0) {#
+			print("hit block")#
+			print(curr)#
+			sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+indexes.to.advance(x, 1)
+bml.step <- function(m){#
+#
+  #advance north the#
+  new.m = apply(m, 2, function(c){#
+  		indexes = indexes.to.advance(c,1)#
+#
+  		for (i in 1:length(c)){#
+  			if (i %in% indexes)#
+  			{#
+  				new.i = i - 1#
+  				if (new.i == 0) {#
+  					new.i = length(c)#
+  				}#
+  				c[i - 1] = c[i]#
+  				c[i] = 0#
+  			}#
+  		}#
+  		c#
+  	})#
+  	new.m#
+   #return(list(m, grid.new))#
+}
+bml.step(m)
+m
+indexes.to.advance <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in rev(1:length(vector))) {#
+		prev <- (curr - 1)%% (length(vector))#
+		if (prev == 0) {#
+			nex = length(vector)#
+		}#
+		if ((vector[prev] == 0 || prev %in% all.indexes) && vector[curr] == v) {#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+		} else if (vector[curr] == v) {#
+#
+			sublist = c(sublist, curr)#
+		} else if (vector[curr] != 0) {#
+#
+			sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+bml.step(m)
+bml.step(m)bml.step <- function(m){#
+#
+  #advance north the#
+  new.m = apply(m, 2, function(c){#
+  		indexes = indexes.to.advance(c,1)#
+  		print(c)#
+  		print(indexes)#
+  		for (i in 1:length(c)){#
+  			if (i %in% indexes)#
+  			{#
+  				new.i = i - 1#
+  				if (new.i == 0) {#
+  					new.i = length(c)#
+  				}#
+  				c[i - 1] = c[i]#
+  				c[i] = 0#
+  			}#
+  		}#
+  		c#
+  	})#
+  	new.m#
+   #return(list(m, grid.new))#
+}
+m = null
+m = NULL
+bml.step(m)bml.step <- function(m){#
+#
+  #advance north the#
+  new.m = apply(m, 2, function(c){#
+  		indexes = indexes.to.advance(c,1)#
+  		print(c)#
+  		print(indexes)#
+  		for (i in 1:length(c)){#
+  			if (i %in% indexes)#
+  			{#
+  				new.i = i - 1#
+  				if (new.i == 0) {#
+  					new.i = length(c)#
+  				}#
+  				c[i - 1] = c[i]#
+  				c[i] = 0#
+  			}#
+  		}#
+  		c#
+  	})#
+  	new.m#
+   #return(list(m, grid.new))#
+}
+bml.step <- function(m){#
+#
+  #advance north the#
+  new.m = apply(m, 2, function(c){#
+  		indexes = indexes.to.advance(c,1)#
+  		print(c)#
+  		print(indexes)#
+  		for (i in 1:length(c)){#
+  			if (i %in% indexes)#
+  			{#
+  				new.i = i - 1#
+  				if (new.i == 0) {#
+  					new.i = length(c)#
+  				}#
+  				c[i - 1] = c[i]#
+  				c[i] = 0#
+  			}#
+  		}#
+  		c#
+  	})#
+  	new.m#
+   #return(list(m, grid.new))#
+}
+m = bmi.init(10,5,.5)
+bml.step(m)
+m
+indexes.to.advance(c(1,1), 1)
+indexes.to.advance <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in rev(1:length(vector))) {#
+		prev <- (curr - 1)%% (length(vector))#
+		if (prev == 0) {#
+			nex = length(vector)#
+		}#
+		print(prev)#
+		print(curr)#
+		if ((vector[prev] == 0 || prev %in% all.indexes) && vector[curr] == v) {#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+		} else if (vector[curr] == v) {#
+#
+			sublist = c(sublist, curr)#
+		} else if (vector[curr] != 0) {#
+#
+			sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+indexes.to.advance(c(1,1), 1)
+indexes.to.advance(c(1,1,0,2), 1)
+indexes.to.advance <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in rev(1:length(vector))) {#
+		prev <- (curr - 1)%% (length(vector))#
+		if (prev == 0) {#
+			prev = length(vector)#
+		}#
+		print(prev)#
+		print(curr)#
+		if ((vector[prev] == 0 || prev %in% all.indexes) && vector[curr] == v) {#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+		} else if (vector[curr] == v) {#
+#
+			sublist = c(sublist, curr)#
+		} else if (vector[curr] != 0) {#
+#
+			sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+bml.step <- function(m){#
+#
+  #advance north the#
+  new.m = apply(m, 2, function(c){#
+  		indexes = indexes.to.advance(c,1)#
+  		print(c)#
+  		print(indexes)#
+  		for (i in 1:length(c)){#
+  			if (i %in% indexes)#
+  			{#
+  				new.i = i - 1#
+  				if (new.i == 0) {#
+  					new.i = length(c)#
+  				}#
+  				c[i - 1] = c[i]#
+  				c[i] = 0#
+  			}#
+  		}#
+  		c#
+  	})#
+  	new.m#
+   #return(list(m, grid.new))#
+}
+bml.step(m)
+m
+bml.step <- function(m){#
+#
+  #advance north the#
+  new.m = apply(m, 2, function(c){#
+  		indexes = indexes.to.advance(c,1)#
+  		print(c)#
+  		print(indexes)#
+  		for (i in 1:length(c)){#
+  			if (i %in% indexes)#
+  			{#
+  				new.i = i - 1#
+  				if (new.i == 0) {#
+  					new.i = length(c)#
+  				}#
+  				c[new.i] = c[i]#
+  				c[i] = 0#
+  			}#
+  		}#
+  		c#
+  	})#
+  	new.m#
+   #return(list(m, grid.new))#
+}
+bml.step(m)
+m
+bml.step <- function(m){#
+#
+  #advance north the#
+  new.m = apply(m, 2, move.car(c, 1)#
+  new.m = apply(new.m, 1, move.car(c, 1))#
+   #return(list(m, grid.new))#
+   new.m#
+}#
+move.car <- function(vector, value) {#
+	  	indexes = indexes.to.advance(vector,value)#
+  		print(vector)#
+  		print(indexes)#
+  		for (i in 1:length(vector)){#
+  			if (i %in% indexes)#
+  			{#
+  				if (value == 1)#
+  				{#
+	  				new.i = i - 1#
+	  			} else {#
+	  				new.i = i + 1 %% (length(vector) + 1)#
+	  			}#
+  				if (new.i == 0) {#
+  					new.i = length(vector)#
+  				}#
+  				vector[new.i] = vector[i]#
+  				vector[i] = 0#
+  			}#
+  		}#
+  		vector#
+}
+bml.step(m)
+indexes.to.advance <- function(vector, v)#
+{#
+	all.indexes = NULL#
+	sublist = NULL#
+	for (curr in rev(1:length(vector))) {#
+		prev = NULL#
+		if (v == 1)#
+		{#
+			prev <- (curr - 1)%% (length(vector))#
+			if (prev == 0) {#
+				prev = length(vector)#
+			}#
+		} else {#
+			prev <- (curr + 1)%% (length(vector) + 1)#
+			if (prev == 0) {#
+				prev = 1#
+			}#
+		}#
+		if ((vector[prev] == 0 || prev %in% all.indexes) && vector[curr] == v) {#
+			all.indexes = c(all.indexes, sublist, curr)#
+			sublist = NULL#
+		} else if (vector[curr] == v) {#
+#
+			sublist = c(sublist, curr)#
+		} else if (vector[curr] != 0) {#
+#
+			sublist = NULL#
+		}#
+	}#
+	all.indexes#
+}
+bml.step(m)
+m
+m = bml.init(10, 5, .5)
+m
+m = bml.init(10, 5, .5)
+m
+bml.step(m)
+bml.step <- function(m){#
+#
+  #advance north the#
+  new.m = apply(m, 2, move.car(c, 1)#
+  new.m = apply(new.m, 1, move.car(c, 2))#
+   #return(list(m, grid.new))#
+   new.m#
+}
+bml.step <- function(m){#
+#
+  #advance north the#
+  new.m = apply(m, 2, move.car(c, 1)#
+  new.m = apply(new.m, 1, move.car(c, 2))#
+   #return(list(m, grid.new))#
+  new.m#
+}
+bml.step <- function(m){#
+#
+  #advance north the#
+  newm = apply(m, 2, move.car(c, 1)#
+  newm = apply(newm, 1, move.car(c, 2))#
+   #return(list(m, grid.new))#
+  newm#
+}
+bml.step <- function(x){#
+#
+  #advance north the#
+  newm = apply(x, 2, move.car(c, 1)#
+  newm = apply(newm, 1, move.car(c, 2))#
+   #return(list(m, grid.new))#
+  newm#
+}
+setwd("desktop/stat133/hw6")
+source("bml_functions.r")
+bml.sim(2,2, .9)
+bml.sim(2,2, .9)
+bml.sim(2,2, .9)
+bml.sim(2,2, .9)
+bml.sim(2,2, .9)
+bml.sim(2,2, .9)

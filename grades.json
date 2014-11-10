@@ -20,11 +20,11 @@
             }
         }, 
         "hw2": {
-            "note": "", 
+            "note": "remove penalty for hw2", 
             "hash": "81d76ce722c90fd3647ec2484947266138571d2c", 
-            "earned": 14, 
+            "earned": 22, 
             "possible": 22, 
-            "penalty": 8, 
+            "penalty": 0, 
             "parts": {
                 "hw2_fig": {
                     "possible": 7, 
