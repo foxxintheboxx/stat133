@@ -145,7 +145,8 @@ bml.sim <- function(r, c, p){
 	m = bml.init(r, c, p)
 	changed = TRUE
 	steps = 0
-	image(m, col = c("white", "red", "blue"))
+
+	#image(m, col = c("white", "red", "blue"))
 	while (changed == TRUE && steps < 6000)
 	{
 
@@ -154,7 +155,7 @@ bml.sim <- function(r, c, p){
 		m = lst[[2]]
 		steps = steps + 1		
 	}
-	image(m, col = c("white", "red", "blue"))
+	#image(m, col = c("white", "red", "blue"))
 	steps
 
 }

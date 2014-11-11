@@ -10,21 +10,10 @@
 
 source("bml_functions.r")
 
+rCols = c("white", "red", "blue")
+steps.large.gridlock <- bml.sim(200, 200, 0.4)
+steps.large.free <- bml.sim(200, 200, 0.3)
 
-# steps.large.grid <- bml.sim(200, 200, 0.39)
-# print(steps.large.grid)
-# steps.large.dense.grid <- bml.sim(200, 200, .7)
-# print(steps.large.dense.grid)
-# steps.medium.grid <- bml.sim(100, 100, 0.39)
-# print(steps.medium.grid)
-# steps.medium.dense.grid <- bml.sim(100, 100, .7)
-# print(steps.medium.dense.grid)
-# steps.small.grid <- bml.sim(60, 60, 0.4)
-# print(steps.small.grid)
-# steps.small.dense.grid <- bml.sim(60, 60, 0.7)
-# print(steps.small.dense.grid)
-# steps.beyond.threshold <- bml.sim(100, 100, 0.3)
-# print(steps.beyond.threshold)
 
 
 #observe increase of density
