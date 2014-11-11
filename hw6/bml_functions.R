@@ -28,23 +28,42 @@ bml.step <- function(m) {
 	#make original
 
 	original = matrix(rep(m), nrow = nrow(m), ncol = ncol(m))
+	if (nrow(m) != 1 && ncol(m) != 1)
+	{
+		blocked <- m[,c(2:ncol(m), 1)]!= 0
+		red_cars <- m*(m==1)
+		m = m*(m!=1) + red_cars*blocked + (red_cars*!blocked)[,c(ncol(m),1:(ncol(m)-1))]
 
-	#get blue cars
-	blocked <- m[c(nrow(m), 1:(nrow(m) - 1)),] != 0
-	blue_cars <- m*(m==2)
-	m = m*(m!=2) + blue_cars*blocked + (blue_cars * !blocked)[c(2:nrow(m), 1),]
-	
-	blocked <- m[,c(2:ncol(m), 1)]!= 0
-	red_cars <- m*(m==1)
-	m = m*(m!=1) + red_cars*blocked + (red_cars*!blocked)[,c(ncol(m),1:(ncol(m)-1))]
+		#get blue cars
+		blocked <- m[c(nrow(m), 1:(nrow(m) - 1)),] != 0
+		blue_cars <- m*(m==2)
+		m = m*(m!=2) + blue_cars*blocked + (blue_cars * !blocked)[c(2:nrow(m), 1),]
+	} else if (nrow(m) == 1 && ncol(m) > 1) {
+		blocked <- m[,1]!= 0
+		red_cars <- m*(m==1)
+		m = m*(m!=1) + red_cars*blocked + (red_cars*!blocked)[,c(ncol(m),1:(ncol(m)-1))]
+
+		#get blue cars
+		blocked <- m[1,] != 0
+		blue_cars <- m*(m==2)
+		m = m*(m!=2) + blue_cars*blocked + (blue_cars * !blocked)[1,]
+	} else if (nrow(m) > 1 && ncol(m) == 1){
+		blocked <- m[,1]!= 0
+		red_cars <- m*(m==1)
+		m = m*(m!=1) + red_cars*blocked + (red_cars*!blocked)[,1]
+
+		#get blue cars
+		blocked <- m[c(nrow(m), 1:(nrow(m) - 1)),] != 0
+		blue_cars <- m*(m==2)
+		m = m*(m!=2) + blue_cars*blocked + (blue_cars * !blocked)[c(2:nrow(m), 1),]
+	}
+
 
 	compared = m == original
 	grid.new = FALSE
 
 	if (FALSE %in% compared)
 	{
-		print("FALSE %in% compared")
-		print(FALSE %in% compared)
 		grid.new = TRUE
 	}
 	list(grid.new, m)
@@ -77,12 +96,6 @@ move.car <- function(vector, value) {
   				vector[i] = 0
   			}
   		}
-  		if (value == 2)
-	  	{
-	  		print("return")
-	  		print(vector)
-	  		
-	  	}
 	  	vector
 }
 
@@ -132,14 +145,16 @@ bml.sim <- function(r, c, p){
 	m = bml.init(r, c, p)
 	changed = TRUE
 	steps = 0
-
-	while (changed == TRUE)
+	image(m, col = c("white", "red", "blue"))
+	while (changed == TRUE && steps < 6000)
 	{
 
 		lst = bml.step(m)
 		changed = lst[[1]]
-		m = lst[[2]]		
+		m = lst[[2]]
+		steps = steps + 1		
 	}
-	return steps
+	image(m, col = c("white", "red", "blue"))
+	steps
 
 }

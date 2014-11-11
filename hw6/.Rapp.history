@@ -1571,19 +1571,18 @@ bml.step <- function(m){#
    #return(list(m, grid.new))#
   newm#
 }
-bml.step <- function(x){#
+bml.step2 <- function(x) {
 #
-  #advance north the#
-  newm = apply(x, 2, move.car(c, 1)#
-  newm = apply(newm, 1, move.car(c, 2))#
-   #return(list(m, grid.new))#
-  newm#
+
+   newm = apply(x, 2, function(c) { move.car(c, 1) })#
+   for (i in 1:ncol(newm)) {
+  		newm[,i] = move.car(newm[,i], 2)
+   }
+
+  newm
 }
 setwd("desktop/stat133/hw6")
-source("bml_functions.r")
-bml.sim(2,2, .9)
-bml.sim(2,2, .9)
-bml.sim(2,2, .9)
-bml.sim(2,2, .9)
-bml.sim(2,2, .9)
-bml.sim(2,2, .9)
+length(seq(0.32,0.99, by = 0.01))
+source("bml_simulation.R")
+source("bml_simulation.R")
+source("bml_simulation.R")
