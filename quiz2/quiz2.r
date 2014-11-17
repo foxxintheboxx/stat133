@@ -201,9 +201,6 @@ serv_wait_sick <- function(inter, serv, br_times){
   result
 }
 
-
-}
-
 # End of quiz.
 
 # Just a test case for break_times and a test case for waiting_times_sick. 
