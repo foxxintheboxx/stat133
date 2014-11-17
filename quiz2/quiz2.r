@@ -123,7 +123,7 @@ sim500 <- replicate(n = 500, queueing_sim(12), simplify = FALSE)
 # avg_wait_total is a 2x500 matrix (without any row names or column names).
 
 
-avg_wait_total <-
+
 
 
 
