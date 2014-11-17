@@ -10,6 +10,7 @@
 
 num_students <- function(k) {
   # your code here
+  rpois(1, k)
 }
 
 # Assume all students arrive at different times.
@@ -27,7 +28,7 @@ num_students <- function(k) {
 # random variables (a vector of length num)
 
 interarrival_times <- function(num) {
-  # your code here
+  rexp(num, 1/6)
 }
 
 # For student i, it takes Z_i minutes for Johnny to answer questions.
@@ -42,7 +43,7 @@ interarrival_times <- function(num) {
 # random variables (a vector of length num)
 
 service_times <- function(num) {
-  # your code here
+  rexp(num, 1/8)
 }
 
 # Compute the waiting time for each student.
@@ -67,6 +68,20 @@ service_times <- function(num) {
 
 waiting_times <- function(inter, serv){
   # your code here
+  result = vector(mode="numeric", length(inter))
+  for (i in 1:length(inter)) {
+  	if (i == 1) {
+  		result[i] = 0
+  	} else{
+  		waiting_time = serv[i - 1] + result[i - 1] - inter[i]
+  		if (waiting_time > 0) {
+  			result[i] = waiting_time
+  		} else {
+  			result[i] = 0
+  		}
+  	}
+  }
+  result
 }
 
 # Simulation
@@ -82,13 +97,21 @@ waiting_times <- function(inter, serv){
 
 queueing_sim <- function(k) {
   # your code here
+  inter = interarrival_times(k)
+  serv = service_times(k)
+  waiting_time = waiting_times(inter, serv)
+  total = serv + waiting_time
+  frame = data.frame("inter" = inter, "serv" = serv, "waiting_time" = waiting_time, "total" = total)
+  frame
 }
 
 set.seed(1234)
 # Run the simulation 500 times with k = 12. 
 # Save the output in a variable called sim500.
 # sim500 is a list of 500 data frames.
-# sim500 <- your code here
+
+
+sim500 <- replicate(n = 500, queueing_sim(12), simplify = FALSE)
 
 
 
@@ -98,7 +121,9 @@ set.seed(1234)
 # the average total time spent in OH.
 # Save the result in a matrix called avg_wait_total.
 # avg_wait_total is a 2x500 matrix (without any row names or column names).
-# avg_wait_total <- your code here
+
+
+avg_wait_total <-
 
 
 
@@ -128,7 +153,15 @@ set.seed(1234)
 # <br_times>: a numeric vector of break times
 
 break_times <- function(n){
-  # your code here
+  br_times = NULL
+  for (i in 1:n) {
+  	break_time = rnorm(1, 4, sd = 2)
+  	if (break_time < 0) {
+  		break_time = 0
+  	}
+  	br_times = c(br_times, break_time)
+  }
+  br_times
 }
 
 # Write a function called serv_wait_sick that computes
@@ -148,6 +181,27 @@ break_times <- function(n){
 
 serv_wait_sick <- function(inter, serv, br_times){
   # your code here
+  result = vector(mode="numeric", length(inter))
+  for (i in 1:length(inter)) {
+  	if (i == 1) {
+  		result[i] = 0
+  	} else{
+  		serv_time = serv[i - 1]
+  		if (i > 5) {
+  			serv_time = serv_time * 1.5
+  		}
+  		waiting_time = serv_time + result[i - 1] - inter[i]
+  		if (waiting_time > 0) {
+  			result[i] = waiting_time
+  		} else {
+  			result[i] = 0
+  		}
+  	}
+  }
+  result
+}
+
+
 }
 
 # End of quiz.

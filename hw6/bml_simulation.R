@@ -11,8 +11,8 @@
 source("bml_functions.r")
 
 rCols = c("white", "red", "blue")
-steps.large.gridlock <- bml.sim(200, 200, 0.4)
-steps.large.free <- bml.sim(200, 200, 0.3)
+#steps.large.gridlock <- bml.sim(200, 200, 0.4)
+#steps.large.free <- bml.sim(200, 200, 0.3)
 
 
 
