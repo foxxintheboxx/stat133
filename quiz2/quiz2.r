@@ -123,7 +123,7 @@ sim500 <- replicate(n = 500, queueing_sim(12), simplify = FALSE)
 # avg_wait_total is a 2x500 matrix (without any row names or column names).
 
 
-
+avg_wait_total <-
 
 
 
@@ -186,11 +186,7 @@ serv_wait_sick <- function(inter, serv, br_times){
   	if (i == 1) {
   		result[i] = 0
   	} else{
-  		serv_time = serv[i - 1]
-  		if (i > 5) {
-  			serv_time = serv_time * 1.5
-  		}
-  		waiting_time = serv_time + result[i - 1] - inter[i]
+  		waiting_time = serv[i - 1] + result[i - 1] - inter[i]
   		if (waiting_time > 0) {
   			result[i] = waiting_time
   		} else {
@@ -199,6 +195,9 @@ serv_wait_sick <- function(inter, serv, br_times){
   	}
   }
   result
+}
+
+
 }
 
 # End of quiz.
