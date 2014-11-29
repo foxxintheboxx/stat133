@@ -190,11 +190,11 @@ uniqueWords <- sort(unique(unlist(speechWords)))
 # # You may want to use an apply statment to first create a list of word vectors, one for each speech.
 
 # # your code to create [wordMat] here:
-wordMat <- sapply(speechWords, function (speech) { 
-  counts <- table(speech)
-  words <- names(counts)
-  ifelse(uniqueWords %in% words, counts[uniqueWords], 0)
-})
+# wordMat <- sapply(speechWords, function (speech) { 
+#   counts <- table(speech)
+#   words <- names(counts)
+#   ifelse(uniqueWords %in% words, counts[uniqueWords], 0)
+# })
 
 # # Load the dataframe [speechesDF] which has two variables,
 # # president and party affiliation (make sure to keep this line in your code):
@@ -228,22 +228,22 @@ speechesDF <- data.frame(speechesDF, yr = speechYr, month = speechMo, words = wo
 # # and that colum is the sum of all the columns corresponding to speeches make by said president.
 
 # # note that your code will be a few lines...
-prez = speechesDF$Pres
-current_prez = 1
-col = 1
-res = prez != prez[2:(length(prez) + 1)]
-res = res[!is.na(res)]
-res[length(res) + 1] = FALSE
-wordmatprez <- matrix(0, ncol = length(table(prez)), nrow = length(uniqueWords))
-for (i in 1:length(prez))
-{
-    wordmatprez[,current_prez] = wordmatprez[,current_prez] + wordMat[,col]
-    col = col + 1
-    if (res[i] == TRUE) {
-      current_prez = current_prez + 1
-    }
-}
-presidentWordMat <- wordmatprez
+# prez = speechesDF$Pres
+# current_prez = 1
+# col = 1
+# res = prez != prez[2:(length(prez) + 1)]
+# res = res[!is.na(res)]
+# res[length(res) + 1] = FALSE
+# wordmatprez <- matrix(0, ncol = length(table(prez)), nrow = length(uniqueWords))
+# for (i in 1:length(prez))
+# {
+#     wordmatprez[,current_prez] = wordmatprez[,current_prez] + wordMat[,col]
+#     col = col + 1
+#     if (res[i] == TRUE) {
+#       current_prez = current_prez + 1
+#     }
+# }
+# presidentWordMat <- wordmatprez
   
 # # At the beginning of this file we sourced in a file "computeSJDistance.R"
 # # It has the following function:
@@ -257,22 +257,22 @@ presidentWordMat <- wordmatprez
 # # [docFreq]: vector of the same length as [uniqueWords], 
 # # count the number of presidents that used the word
 
-docFreq <- apply(presidentWordMat, 1, function(row) {sum(row > 0)})
+#docFreq <- apply(presidentWordMat, 1, function(row) {sum(row > 0)})
     
 # # Call the function computeSJDistance() with the arguments
 # # presidentWordMat, docFreq and uniqueWords
 # # and save the return value in the matrix [presDist]
 
-presDist <- computeSJDistance(presidentWordMat, docFreq, uniqueWords)
+# presDist <- computeSJDistance(presidentWordMat, docFreq, uniqueWords)
 
 # ## Visuzlise the distance matrix using multidimensional scaling.
 # # Call the function cmdscale() with presDist as input.
 # # Store the result in the variable [mds] by 
 
-mds <- cmdscale(presDist)
+# mds <- cmdscale(presDist)
 
 # # First do a simple plot the results:
-plot(-mds[,1], mds[,2])
+# plot(-mds[,1], mds[,2])
 
 # # Customize this plot by:
 # # -- remove x and y labels and put the title "Presidents" on the plot
