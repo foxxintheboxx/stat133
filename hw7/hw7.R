@@ -299,8 +299,8 @@ cols <- rainbow(6)
 
 ### Use hierarchical clustering to produce a visualization of  the results.
 # Compare the two plots.
-hc = hclust(as.dist(presDist))
-plot(hc)
+# hc = hclust(as.dist(presDist))
+# plot(hc)
 
 # ## Final part 
 # # Use the data in the dataframe speechesDF to create the plots:
