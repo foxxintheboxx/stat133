@@ -1579,8 +1579,9 @@ bml.step <- function(x){#
    #return(list(m, grid.new))#
   newm#
 }
-setwd("desktop/stat133/hw7")
+setwd("desktop/stat133")
+setwd("hw7")
 source("hw7.r")
-devoff()
-dev.off()
-dev.on()
+source("hw7.r")
+pdf("Rplots.pdf", 8,8)
+source("hw7.r")
