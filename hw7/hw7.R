@@ -294,8 +294,8 @@ cols <- rainbow(6)
 # then call text() with the presidents' names as labels and the color argument
 # col = cols[presParty[rownames(presParty)]]
   
-plot(-mds[,1], mds[,2], type = "n", main = "Presidents", xlab="", ylab="")
-text(-mds[,1], mds[,2], labels = unique(speechesDF$initial), col = cols[presParty[rownames(presParty)]])
+# plot(-mds[,1], mds[,2], type = "n", main = "Presidents", xlab="", ylab="")
+# text(-mds[,1], mds[,2], labels = unique(speechesDF$initial), col = cols[presParty[rownames(presParty)]])
 
 ### Use hierarchical clustering to produce a visualization of  the results.
 # Compare the two plots.
