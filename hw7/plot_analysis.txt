@@ -1,0 +1,24 @@
+Distances between speeches Plots
+It seems the era more closely defines the distance more than party. Barack Obama deviates the most from the others.
+The overall shape of the graph is parabolic
+
+Sentence vs Year.
+The sentences vs year plots shows that a linear growth in number of sentences per speech.
+Its interesting to see the two outliers Jimmy Carter and Harry Truman who have around 1300 sentences in their speech.
+During the early 20th century there seemed to be a spike in sentences.
+
+Words vs. Year.
+Similar to sentences vs year, the polots shows an overall linear growth. However during the early to mid 20th century the number of words spiked.
+
+Characters vs. Year.
+
+Character vs Year also had a spiked in th early 20th century, Then decreased into the 21st century. Its interesting to not Jimmy Carter had a huge number of characters
+
+Avg Word Length vs Year.
+
+Avg Word length seems to have stayed the same, with a slight decrease towards the twentieth century. 
+Its interesting to note there is more outliers toward the mid 20th to early 21st century.
+
+Avg Sentences Length vs Year.
+
+The avg sentence length decreased tremendously with time.

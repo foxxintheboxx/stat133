@@ -1,6 +1,3 @@
-booleans
-zeroes = which(x == 0)
-ones = indexes
 twos = which(x == 2)
 zeroes
 ones
@@ -1579,9 +1576,14 @@ bml.step <- function(x){#
    #return(list(m, grid.new))#
   newm#
 }
-setwd("desktop/stat133")
-setwd("hw7")
+setwd("desktop/stat133/hw7")
 source("hw7.r")
 source("hw7.r")
-pdf("Rplots.pdf", 8,8)
 source("hw7.r")
+source("hw7.r")
+setwd("..")
+setwd("classwork")
+wd()
+setwd("sectiove-cv")
+setwd("section-cv")
+load("/Users/ianfox/Desktop/stat133/hw7/speeches_dataframe.Rda")
