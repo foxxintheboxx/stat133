@@ -14,6 +14,7 @@
 numAtElements <- function(chvec){
   
   # your code here
+  return length(grep("@", chvec))
 }
 
 # Function 2 (3 points)
@@ -27,6 +28,8 @@ numAtElements <- function(chvec){
 unexclaim <- function(chstring) {
   
   # your code here
+  return gsub("!", ".", chstring)
+
 }
 
 # Function 3 (3 points)
@@ -44,6 +47,8 @@ unexclaim <- function(chstring) {
 updateDate <- function(dates, old.yr) {
   
   # your code here
+  indexes = grep(old.yr, dates)
+  return gsub("[[:digit:]]{4}", "2015", dates[indexes])
 }
 
 # Function 4 (4 points)
@@ -59,7 +64,10 @@ updateDate <- function(dates, old.yr) {
 #                    cat dog
 #                     3   1
 countcatdog<- function(chvec){
-  
+  chvec = tolower(chvec)
+  cats = length(gregexpr("cat", chvec)[[1]])
+  dogs = length(gregexpr("dog", chvec)[[1]])
+  c(cats, dogs)
   # your code here
 }
 
@@ -72,8 +80,10 @@ countcatdog<- function(chvec){
 # and return the following
 #   <total>: A single number (the sum of all the digits in chvec)
 sumDigits <- function(chvec){
-
+  chars = strsplit(chvec, "")[[1]]
+  indexes  = grep("[[:digit:]]", chars)
   # your code here
+  sum(as.integer(chars[indexes]))
 }
 
 # Some test cases:
@@ -108,8 +118,19 @@ sumDigits <- function(chvec){
 #   <DNA_final>: A character vector of two DNAs
 
 dnaTransform <- function(DNA.vec){
-    
+
+  indexes = grep("ATTA", DNA.vec)
+  if length(indexes) < 2 {
+  	#return DNA.vec[c(1,2)]
+  }
+  DNA1 = DNA.vec[indexes[1]]
+  DNA2 = DNA.vec[indexes[2]]
   # your code here
+  split1a = gsub(" ", "", paste(strsplit(DNA1, "")[[1]][1:5], "", collapse = ""))
+  split1b = gsub(" ", "", paste(strsplit(DNA1, "")[[1]][6:10], "", collapse = ""))
+  split2a = gsub(" ", "", paste(strsplit(DNA2, "")[[1]][1:5], "", collapse = ""))
+  split2b = gsub(" ", "", paste(strsplit(DNA2, "")[[1]][6:10], "", collapse = ""))
+  c(gsub(" ", "", paste(c(split1a, split2b), "", collapse = "")), gsub(" ", "", paste(c(split2a, split1b), "", collapse = "")))
 }
 
 # Some test cases:
