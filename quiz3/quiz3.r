@@ -87,8 +87,8 @@ sumDigits <- function(chvec){
 }
 
 # Some test cases:
-# all.equal(sumDigits("1z3p ! 21"), 7)
-# all.equal(sumDigits("abcdefg"), 0)
+# print(all.equal(sumDigits("1z3p ! 21"), 7))
+# print(all.equal(sumDigits("abcdefg"), 0))
 
 
 # Function 6 (6 points)
@@ -135,7 +135,7 @@ dnaTransform <- function(DNA.vec){
 }
 
 # Some test cases:
-# all.equal(dnaTransform(c("AAAAAAAAAA", "ATTAGATACT", "ATACATTACG")), c("ATTAGTTACG", "ATACAATACT"))
-# all.equal(dnaTransform(c("ATCGATCGAT", "TCGATCGATT", "ATTTTTTTTT")), c("ATCGATCGAT", "TCGATCGATT"))
+# print(all.equal(dnaTransform(c("AAAAAAAAAA", "ATTAGATACT", "ATACATTACG")), c("ATTAGTTACG", "ATACAATACT")))
+# print(all.equal(dnaTransform(c("ATCGATCGAT", "TCGATCGATT", "ATTTTTTTTT")), c("ATCGATCGAT", "TCGATCGATT")))
 
 # End of Quiz 3
