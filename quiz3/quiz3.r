@@ -11,10 +11,10 @@
 # and return the following
 #   <num.at>: an integer indicating how many elements of <chvec> contain the "@"
 #     symbol. For example: numAtElements(c('karl', 'k@rl', '@@@')) should return 2
-numAtElements <- function(chvec){
+numAtElements <- function(chvec) {
   
   # your code here
-  return length(grep("@", chvec))
+  return(length(grep("@", chvec)))
 }
 
 # Function 2 (3 points)
@@ -28,7 +28,7 @@ numAtElements <- function(chvec){
 unexclaim <- function(chstring) {
   
   # your code here
-  return gsub("!", ".", chstring)
+  return(gsub("!", ".", chstring))
 
 }
 
@@ -48,7 +48,7 @@ updateDate <- function(dates, old.yr) {
   
   # your code here
   indexes = grep(old.yr, dates)
-  return gsub("[[:digit:]]{4}", "2015", dates[indexes])
+  return(gsub("[[:digit:]]{4}", "2015", dates[indexes]))
 }
 
 # Function 4 (4 points)
@@ -67,7 +67,7 @@ countcatdog<- function(chvec){
   chvec = tolower(chvec)
   cats = length(gregexpr("cat", chvec)[[1]])
   dogs = length(gregexpr("dog", chvec)[[1]])
-  c(cats, dogs)
+  return(c(cats, dogs))
   # your code here
 }
 
@@ -83,7 +83,7 @@ sumDigits <- function(chvec){
   chars = strsplit(chvec, "")[[1]]
   indexes  = grep("[[:digit:]]", chars)
   # your code here
-  sum(as.integer(chars[indexes]))
+  return(sum(as.integer(chars[indexes])))
 }
 
 # Some test cases:
@@ -120,8 +120,9 @@ sumDigits <- function(chvec){
 dnaTransform <- function(DNA.vec){
 
   indexes = grep("ATTA", DNA.vec)
-  if length(indexes) < 2 {
-  	#return DNA.vec[c(1,2)]
+  if (length(indexes) < 2) {
+  	x <- DNA.vec[c(1,2)]
+  	return(x)
   }
   DNA1 = DNA.vec[indexes[1]]
   DNA2 = DNA.vec[indexes[2]]
